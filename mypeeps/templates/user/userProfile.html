@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<div class="container">
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+  {% for i in profile_info %}
+    <h5 class="card-title">Welcome {{i.user.first_name}}</h5>
+    
+    <span>
+    <p>Complete your bio</p>
+
+    </span>
+    <p>{{i.tribe}}</p>
+    <p>{{i.friends}}</p>
+    <p>{{i.user.username}}</p>
+    <p>{{i.user.email}}</p>
+    <p></p>
+    <p></p>
+    {% endfor %}
+  </div>
+<br>
+  </div>
+  <br>
+     <a href='update_profile'> 
+        <button class="btn-primary"> 
+            UPDATE PROFILE
+        </button> 
+    </a> 
+</div>
+    {% endblock body %}

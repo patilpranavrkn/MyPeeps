@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+ {% block nav_btn1 %}
+  <button type="button" class="btn btn-outline-warning mx-2" data-toggle="modal" data-target="#loginModal">
+    Sign In</button>
+  {% endblock nav_btn1 %}
+
+{% block modal %}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginmodalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="login">
+        {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email username</label>
+            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username" name="username">
+            <small id="emailHelp" class="form-text text-muted">Let's make sure it's unique.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+  
+    </div>
+  </div>
+</div>
+{% endblock modal %}
+{% block body %}
+<div class="container">
+<h2 class="form-group my-4">Sign Up to Your Account <h2>
+<form method="POST" action="/signup">
+    {% csrf_token %}
+    <div class="form-group my-4">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="Email-address" name="email">
+    </div>
+
+    <div class="form-group my-4">
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="name" placeholder="name" name="name">
+    </div>
+
+    <div class="form-group my-4">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="username" name="username" >
+    </div>
+
+    <div class="form-group my-4">
+      <label for="password">Password</label>
+      <input type="text" class="form-control" id="password" placeholder="password" name="password">
+    </div>
+
+    <div class="form-group my-4">
+      <label for="confpassword">Confirm-Password</label>
+      <input type="text" class="form-control" id="confpassword" placeholder="confirm-password" name="confpassword">
+    </div>
+    <div>
+     <input type="submit" class="btn btn-primary">
+    </div>
+</form>
+
+</div>
+{% endblock body %}
