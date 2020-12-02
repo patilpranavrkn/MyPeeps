@@ -3,18 +3,30 @@
 
 {% block body %}
 
-<div class="card text-center">
-  <div class="card-header">
-    Featured
-  </div>
+<div class="container">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  {% for i in profile_info %}
+    <h5 class="card-title">Welcome {{i.user.first_name}}</h5>
+    
+    <p>{{i.tribe}}</p>
+    <p>{{i.friends}}</p>
+    <p>{{i.user.username}}</p>
+    <p>{{i.user.email}}</p>
+    <p>{{i.bio}}</p>
+    <p></p>
+    {% endfor %}
   </div>
-  <div class="card-footer text-muted">
-    2 days ago
+<form action="Addbio" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter your Bio</label>
+    <input type="email" class="form-control" id="bio" name="bio"aria-describedby="emailHelp" placeholder="Share your beautiful info">
+    <small id="emailHelp" class="form-text text-muted">Share Your ID</small>
   </div>
+ 
+  <button type="submit" class="btn btn-primary">update</button>
+</form>
+
+
 </div>
 
    {% endblock body %}

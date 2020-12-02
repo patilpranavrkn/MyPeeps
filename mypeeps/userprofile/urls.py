@@ -7,5 +7,7 @@ from django.conf.urls.static import static
 urlpatterns=[
     path('',views.profilep,name='profilep'),
     path('update_profile',views.update_profile,name='update_profile'),
+    path('Addbio',views.Addbio,name='Addbio'),
+
 
 ]

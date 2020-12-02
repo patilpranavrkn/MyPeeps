@@ -31,3 +31,11 @@ def update_profile(request):
     
     
     return render(request,'user/update_profile.html',data_key)
+
+def Addbio(request):
+
+    bio=request.POST.get('bio','')
+    Profile.objects.filter(user=request.user).update(bio=bio)
+
+    return HttpResponse("Updated")
+
