@@ -16,10 +16,14 @@
     <p></p>
     {% endfor %}
   </div>
-<form action="Addbio" method="post">
+<form action="Addbio" method="post" enctype="multipart/form-data">
+{% csrf_token %}
   <div class="form-group">
-    <label for="exampleInputEmail1">Enter your Bio</label>
-    <input type="email" class="form-control" id="bio" name="bio"aria-describedby="emailHelp" placeholder="Share your beautiful info">
+     <label for="img">Select profile image:</label>
+    <input type="file" id="img" name="img" accept="image/*">
+    <br>
+    <label for="bio">Enter your Bio</label>
+    <input type="text" class="form-control" id="bio" name="bio"aria-describedby="emailHelp" placeholder="Share your beautiful info">
     <small id="emailHelp" class="form-text text-muted">Share Your ID</small>
   </div>
  

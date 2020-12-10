@@ -10,4 +10,4 @@ urlpatterns=[
     path('Addbio',views.Addbio,name='Addbio'),
 
 
-]
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

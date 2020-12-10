@@ -21,7 +21,7 @@ class Post(models.Model):
     topic=models.CharField(max_length=100)
     caption=models.CharField(max_length=200)
     date=models.DateTimeField(auto_now_add=True, blank=True)
-    image=models.ImageField(upload_to="user_image",blank=True)
+    image=models.ImageField(upload_to="Profile/%Y/%m/%d",blank=True)
 
 
     def __str__(self):

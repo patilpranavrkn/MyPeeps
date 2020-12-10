@@ -34,8 +34,24 @@ def update_profile(request):
 
 def Addbio(request):
 
-    bio=request.POST.get('bio','')
-    Profile.objects.filter(user=request.user).update(bio=bio)
+    print("ewwww**********")
+    print("inside add bio")
+
+    if(len(request.FILES)==1):
+        print(request.FILES)
+        image=request.FILES['img']    
+        bio=request.POST.get('bio','')
+        Profile.objects.filter(user=request.user).update(bio=bio)
+        Profile.objects.filter(user=request.user).update(userImage=image)
+
+        prop_obj=Profile.objects.get(request.user)
+        
+
+
+    else:
+        bio=request.POST.get('bio','')
+        Profile.objects.filter(user=request.user).update(bio=bio)
+        
 
     return HttpResponse("Updated")
 
