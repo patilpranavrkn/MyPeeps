@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+<h1>Friend Predictions</h1>
+</div>
+
+<br>
+
+
+<div class="form-group">
+<h4>Enter Name to Identify the Person.</h4>
+<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+<br>
+
+<div class="row">
+    <div class="col">
+      <h5>How Much you feel Comfortable with the Person?</h5><br>
+      <select class="form-control" id="opt1" name="opt1">
+        <option value="1">Very Much</option>
+        <option value="2">Most of the times</option>
+        <option value="3">Quite good</option>
+        <option value="4">Sometimes not comfortable.</option>
+        <option value="5">Not comfortable</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Topics of Conversation </h5><br>
+      <select class="form-control" id="opt2" name="opt2">
+        <option value="1">Ideation</option>
+        <option value="2">Studies and career related</option>
+        <option value="3">Events,sports</option>
+        <option value="4">Talking about films and songs</option>
+        <option value="5">More casual conversations and need related</option>
+        <option value="6">Gossipis</option>
+        <option value="7">Work Related</option>
+    </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h5>Time spent together</h5><br>
+      <select class="form-control" id="opt3" name="opt3">
+        <option value="1">Most of the time together</option>
+        <option value="2">Conisderable together</option>
+        <option value="3">Often Meets</option>
+        <option value="4">Less</option>
+        <option value="5">Very Less</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Period you’ve know each other</h5><br>
+      <select class="form-control" id="opt4" name="opt4">
+        <option value="1">We’re old friends.</option>
+        <option value="2">Most of the  sometime </option>
+        <option value="3">Known for sometime</option>
+        <option value="4">Met Just Recently</option>
+       
+    </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h5>Do you feel like avoiding the person?</h5><br>
+      <select class="form-control" id="opt5" name="opt5">
+        <option value="1">Never</option>
+        <option value="2">Not most of the times,but sometim</option>
+        <option value="3">Sometimes</option>
+        <option value="4">Often</option>
+        <option value="5">Very Often</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Do you feel avoided</h5><br>
+      <select class="form-control" id="opt6" name="opt6">
+        <option value="1">Never</option>
+        <option value="2">Not really</option>
+        <option value="3">Sometimes</option>
+        <option value="4">Often</option>
+        <option value="5">Very Often</option>
+        
+    </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h5>Helpful</h5><br>
+      <select class="form-control" id="opt7" name="opt7">
+        <option value="1">Always</option>
+        <option value="2">Most of the times</option>
+        <option value="3">Sometimes</option>
+        <option value="4">Neverat most of times</option>
+        <option value="5">Never Ever</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>How do you feel after the  conversation?</h5><br>
+      <select class="form-control" id="opt8" name="opt8">
+        <option value="1">Joyful</option>
+        <option value="2">Peaceful</option>
+        <option value="3">Hopeful</option>
+        <option value="4">Excited</option>
+        <option value="5">Angry</option>
+        <option value="6">Tired</option>
+        <option value="7">Nothing really</option>
+        <option value="8">Drained</option>
+    </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h5>Your Life</h5><br>
+      <select class="form-control" id="opt9" name="opt9">
+        <option value="1">I’m Very successful in my career and Life</option>
+        <option value="2">I’m quite successful </option>
+        <option value="3">I’m  working on career and success</option>
+        <option value="4">I’m struggling with life.</option>
+        <option value="5">I’m a total failure and messed up person.</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Friend’s Life</h5><br>
+      <select class="form-control" id="opt10" name="opt10">
+        <option value="1">He’s very Successful at what he does.</option>
+        <option value="2">He’s quite successful at what he does.</option>
+        <option value="3">Currently He’s working on it.</option>
+        <option value="4">He’s struggling with life.</option>
+        <option value="5">He’s a total mess.</option>
+       
+    </select>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col">
+      <h5>Intoxicant’s</h5><br>
+      <select class="form-control" id="opt11" name="opt11">
+        <option value="1">Nothing as such</option>
+        <option value="2">Occassionally</option>
+        <option value="3">Has a regular habbit</option>
+        <option value="4">He’s addicted to lot of intoixacnts</option>
+     
+    </select>
+    </div>
+    <div class="col">
+    <h5>Your Intoxicant’s habbit </h5><br>
+      <select class="form-control" id="opt12" name="opt12">
+        <option value="1">Nothing as such</option>
+        <option value="2">Occassionally</option>
+        <option value="3">I do have an regular habbit</option>
+        <option value="4">I’m an addict </option>
+      
+    </select>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col">
+      <h5>Your current mental state</h5><br>
+      <select class="form-control" id="opt13" name="opt13">
+        <option value="1">I'm fine and very happy</option>
+        <option value="2">Quite happy</option>
+        <option value="3">I have my ups and downs</option>
+        <option value="4">Often I’m sad.</option>
+        <option value="5">Maybe I’m depressed</option>
+
+    </select>
+    </div>
+    <div class="col">
+    <h5>Guess about your friend’s mental state </h5><br>
+      <select class="form-control" id="opt14" name="opt14">
+        <option value="1">He’s fine and very happy</option>
+        <option value="2">Quite Happy</option>
+        <option value="3">Might have personal ups and downs</option>
+        <option value="4">He’s quite sad</option>
+        <option value="5">5.Maybe he’s depressed</option>
+        
+    </select>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-5">
+      <h5>Agree Upon Things</h5><br>
+      <select class="form-control" id="opt15" name="opt15">
+        <option value="1">Always</option>
+        <option value="2">Most of the times.</option>
+        <option value="3">Occassionally</option>
+        <option value="4">Rarely</option>
+        <option value="5">Never</option>
+      
+    </select>
+    </div>
+      <br>
+   <div class="row">
+    <div class="col-5"></div>
+  <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+</div>
+   
+  </div>
+
+{% endblock body %}

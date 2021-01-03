@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+<h1>Realtionship Predictions</h1>
+</div>
+
+<br>
+
+
+<div class="form-group">
+<h4>Enter Name to Identify the Person.</h4>
+<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+<br>
+ <div class="row">
+    <div class="col">
+      <h5>How you feel in the presence of your partner?</h5><br>
+      <select class="form-control" id="opt1" name="opt1">
+        <option value="1">Peaceful.</option>
+        <option value="2">Very Happy</option>
+        <option value="3">Happy</option>
+        <option value="4">Comfortable</option>
+        <option value="5">Nervous</option>
+        <option value="6">Angry</option>
+        <option value="7">Sad.</option>
+        <option value="8">Threatened</option>
+    </select>
+    </div>
+    <div class="col">
+    <h5>How do you feel in the absence of your partner? (FAP)</h5><br>
+      <select class="form-control" id="opt2" name="opt2">
+        <option value="1">His presence/absence doesn’t affect me.</option>
+        <option value="2">Lonely.</option>
+        <option value="3">Sad</option>
+        <option value="4">Angry</option>
+       
+    </select>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col">
+      <h5>Communication between the partner and you.</h5><br>
+      <select class="form-control" id="opt3" name="opt3">
+        <option value="1">1.Very Healthy Communication</option>
+        <option value="2">It’s fine</option>
+        <option value="3">Not good</option>
+       
+    </select>
+    </div>
+    <div class="col">
+    <h5>Do you have fights?</h5><br>
+      <select class="form-control" id="opt4" name="opt4">
+        <option value="1">Very Rarely</option>
+        <option value="2">Rarely </option>
+        <option value="3">Occasionally.</option>
+        <option value="4">Most of the times</option>
+    
+    </select>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col">
+      <h5>What most of your conversations about?</h5><br>
+      <select class="form-control" id="opt5" name="opt5">
+        <option value="1">Future planning,Ideas and Art</option>
+        <option value="2">Intimate romantic and supporting talks</option>
+        <option value="3">Gossips and Pity parties.</option>
+        <option value="4">Conversations which you think are time wasting.</option>
+        <option value="5">Complains and Fight</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Does your partner tend to get jealous or possessive about you? </h5><br>
+      <select class="form-control" id="opt6" name="opt6">
+        <option value="1">No</option>
+        <option value="2">Yes</option>
+   
+    </select>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col">
+      <h5>Do you  tend to get jealous or possessive about partner?</h5><br>
+      <select class="form-control" id="opt7" name="opt7">
+       <option value="1">No</option>
+    <option value="2">Yes</option>
+   
+    </select>
+    </div>
+    <div class="col">
+    <h5>What can you tell about trust and Support?</h5><br>
+      <select class="form-control" id="opt8" name="opt8">
+        <option value="1">Strongly Agree</option>
+        <option value="2">Agree</option>
+        <option value="3">Apathetic</option>
+        <option value="4">Not Agree</option>
+        <option value="5">Strongly Not Agree</option>
+        
+    </select>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col">
+      <h5>Intimacy</h5><br>
+      <select class="form-control" id="opt9" name="opt9">
+        <option value="1">Strongly Agree</option>
+        <option value="2">Agree</option>
+        <option value="3">The Usual</option>
+        <option value="4">Not Agree</option>
+        <option value="5">Strongly Not Agree</option>
+    </select>
+    </div>
+    <div class="col">
+    <h5>Are you pursuing your shared goals?</h5><br>
+      <select class="form-control" id="opt10" name="opt10">
+        <option value="1">Strongly Agree</option>
+        <option value="2">Agree</option>
+        <option value="3">The Usual</option>
+        <option value="4">Not Agree</option>
+        <option value="5">Strongly Not Agree</option>
+    </select>
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col">
+      <h5>Do you  seeks partner’s affection and Validation.</h5><br>
+      <select class="form-control" id="opt11" name="opt11">
+        <option value="1">Strongly Not Agree</option>
+        <option value="2">Not Agree</option>
+        <option value="3">The Usual</option>
+        <option value="4">Agree</option>
+        <option value="5">Strongly Agree</option>
+   
+    </select>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-5"></div>
+    <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+</div>
+
+
+ </div>
+
+{% endblock body %}

@@ -55,3 +55,25 @@ def Addbio(request):
 
     return HttpResponse("Updated")
 
+def Predicthp(request):
+
+
+    return render(request,'user/Predicthp.html')
+
+def familypred(request):
+
+    
+
+    return render(request,"user/familypred.html")    
+
+def crushpred(request):
+
+    return render(request,"user/crushpred.html")  
+
+def relatpred(request):
+
+    return render(request,"user/relatpred.html")  
+
+def friendpred(request):
+
+    return render(request,"user/friendpred.html")      

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+<h1>Crush Predictions</h1>
+</div>
+
+<div class="container">
+<h2>Answer the following questions</h2>
+<br>
+
+
+<div class="form-group">
+<h4>Enter Name to Identify the Person.</h4>
+<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+<br>
+
+<div class="row">
+    <div class="col">
+      <h5>How Does Your Crush Respond to You? </h5><br>
+      <select class="form-control" id="opt1" name="opt1">
+        <option value="1">Is Attentiv</option>
+        <option value="2">Positively</option>
+        <option value="3">As of Good Friend</option>
+        <option value="4">Apathetically</option>
+        <option value="5">5.Avoids me</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Does the person know that you’re Interested in them?</h5><br>
+      <select class="form-control" id="opt2" name="opt2">
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+        <option value="3">Maybe</option>
+  
+    </select>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <h5>How well that the person knows you?</h5><br>
+      <select class="form-control" id="opt3" name="opt3">
+        <option value="1">Very Well</option>
+        <option value="2">Quite well</option>
+        <option value="3">Okayish</option>
+        <option value="4">Less</option>
+        <option value="5">Very Less</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Has Previously the person been rude/insulted/Avoided in need or any misbehavior  to you? </h5><br>
+      <select class="form-control" id="opt4" name="opt4">
+        <option value="1">No</option>
+        <option value="2">Yes</option>
+    </select>
+    </div>
+  </div>
+  <br>
+   <div class="row">
+    <div class="col-5">
+      <h5>IS the person currently In any relationship? </h5><br>
+      <select class="form-control" id="opt5" name="opt5">
+        <option value="1">No</option>
+        <option value="2">Yes</option>
+        <option value="3">Maybe</option>
+    
+    </select>
+    </div>
+    </div>
+  <br>
+   <div class="row">
+    <div class="col-5"></div>
+  <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+</div>
+</div>
+
+{% endblock body %}

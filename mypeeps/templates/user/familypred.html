@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+<h1>Family Predictions</h1>
+</div>
+<div class="container">
+<h2>Answer the following questions</h2>
+<br>
+
+
+<div class="form-group">
+<h4>Enter Name to Identify the Person.</h4>
+<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+<br>
+ <div class="row">
+    <div class="col">
+      <h5>How you feel in the presence of the person?</h5><br>
+      <select class="form-control" id="opt1" name="opt1">
+        <option value="1">Delighted</option>
+        <option value="2">Happy</option>
+        <option value="3">Secure</option>
+        <option value="4">Nothing much</option>
+        <option value="5">Want to avoid</option>
+        <option value="6">Fear</option>
+        <option value="7">Afraid</option>
+    </select>
+    </div>
+    <div class="col">
+    <h5>Can you communicate with the person freely?Expressively?</h5><br>
+      <select class="form-control" id="opt2" name="opt2">
+        <option value="1">Always</option>
+        <option value="2">Most of the times</option>
+        <option value="3">Whenever absolute necessary</option>
+        <option value="4">Not most of the times</option>
+        <option value="5">Never</option>
+        
+    </select>
+    </div>
+  </div>
+  <br>
+   <div class="row">
+    <div class="col">
+      <h5>Does the member respond to your emotional or materialistic needs</h5><br>
+      <select class="form-control" id="opt3" name="opt3">
+        <option value="1">Always</option>
+        <option value="2">Most of the times</option>
+        <option value="3">Whenever absolute necessary</option>
+        <option value="4">Not Most of the times</option>
+        <option value="5">Never</option>
+        
+    </select>
+    </div>
+    <div class="col">
+    <h5>Any bitterness or grudge towards that person?</h5><br>
+    <br>
+      <select class="form-control" id="opt4" name="opt4">
+        <option value="1">No</option>
+        <option value="2">Maybe </option>
+        <option value="3">Yes</option>
+      
+    </select>
+    </div>
+  </div>
+  <br>
+   <div class="row">
+    <div class="col-5"></div>
+  <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+</div>
+</div>
+
+
+{% endblock body %}
