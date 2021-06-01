@@ -1,0 +1,480 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+	<style>
+	
+	.emojiT
+	{
+		  
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+  width: 80px; 
+  height: 40px;
+  line-height: 20px;
+  margin: 10px auto;
+  letter-spacing: -.07em;
+  text-shadow: white 2px 2px 2px;
+
+	}
+
+.btn-outline {
+  color: #4fbfa8;
+  background-color: #ffffff;
+  border-color: #4fbfa8;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.btn-outline {
+  color: #4fbfa8;
+  background-color: #ffffff;
+  border-color: #4fbfa8;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline.active {
+  background: #4fbfa8;
+  color: #ffffff;
+  border-color: #4fbfa8;
+  
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+ <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script> 
+
+	</style>
+  </head>
+  <body >
+   <div class="container">
+   
+<div class="row justify-content-center ">
+    <div class="col-sm-5 ">
+   <h1 class="display-3" style="text-align:center">OUR Analaysis</h1>
+   </div>
+   </div>
+
+   
+   
+   
+
+		<div class="row justify-content-center ">
+	
+    <div class="col-sm-5">
+		  <figure class="figure">
+			 <img src="{% static IMG_NAME %}"  width="500" height="600" class="rounded img-fluid" id="page_image">
+			  
+		  
+		  </figure>
+	</div>
+
+	</div>
+	
+	<div class="row justify-content-center">
+				 <div class="col-sm-5">
+<div class="card text-dark bg-light mb-3 res" style="max-width: 25rem;" id="samp1">
+  <div class="card-header"><h2 style="text-align:center">{{title}}</h2></div>
+  <div class="card-body">
+    
+    <p class="card-text">{{desc}</p>
+  </div>
+</div>
+	 </div>
+	
+	</div>
+	
+
+   
+   <div class="row justify-content-center">
+    <div class="col-sm">
+	<div class="table-responsive"> 
+      <table class="table table-bordered">
+  <thead class="table-danger">
+    <tr>
+   
+      <th scope="col" style="text-align:center">Characteristics1 </th>
+    </tr>
+  </thead>
+ <tbody>
+ {% for i in char1 %}
+ <tr>
+	<td>{{i}}</td>
+ </tr>
+ {% endfor %}
+ 
+ </tbody>
+</table>
+    </div>
+	</div>
+    <div class="col-sm">
+	<div class="table-responsive"> 
+  <table class="table table-bordered">
+  <thead class="table-success">
+    <tr>
+   
+      <th scope="col" style="text-align:center">Characteristics2 </th>
+    </tr>
+  </thead>
+ <tbody>
+ {% for i in char2 %}
+ <tr>
+	<td>{{i}}</td>
+ </tr>
+ {% endfor %}
+
+ 
+ </tbody>
+</table>
+			
+    </div>
+	</div>
+  </div>
+  <div>
+     <div class="row justify-content-center">
+    <div class="col-sm">
+	<div class="table-responsive"> 
+      <table class="table table-bordered">
+  <thead class="table-info">
+    <tr>
+   
+      <th scope="col" style="text-align:center">Characteristics 3 </th>
+    </tr>
+  </thead>
+ <tbody>
+ {% for i in char3 %}
+ <tr>
+	<td>{{i}}</td>
+ </tr>
+ {% endfor %}
+ 
+ </tbody>
+</table>
+    </div>
+	</div>
+    <div class="col-sm">
+	<div class="table-responsive"> 
+  <table class="table table-bordered">
+  <thead class="table-warning">
+    <tr>
+   
+      <th scope="col" style="text-align:center">Characteristics 4 </th>
+    </tr>
+  </thead>
+ <tbody>
+ {% for i in char4 %}
+ <tr>
+	<td>{{i}}</td>
+ </tr>
+ {% endfor %}
+ 
+ 
+ </tbody>
+</table>
+			
+    </div>
+	</div>
+  </div>
+  
+   
+     
+  </div>
+
+	<br>
+	<br>
+	<div class="row justify-content-center">
+	<div class="col-3">
+	</div>
+		<div class="col-5">
+		 <img src="{% static 'emoji/NEU.jpg' %}" width ="140px" height="140px"  class="rounded img-fluid" id="emoimg">
+		
+		</div>
+
+	
+	</div>
+	
+	
+	<br>
+	<div class="row justify-content-center">
+
+		<span>&nbsp</span>
+		<div class="col-sm-5 emojiT">
+		<p id="desc">Neutral</p> 
+		</div>
+		
+
+	
+	
+	</div>
+		<div class="row justify-content-center">
+		<div class="col-sm">
+		 <input type="range" min="0" max="48" value="24" class="slider" id="myRange" step="8" >
+		 </div>
+		 </div>
+
+		
+
+
+
+		
+  
+	<br>
+	<div class="row justify-content-center  ">
+	
+	<h5 id="info" class="display-6">&nbsp</h5>
+		
+   </div>
+   <div class="row justify-content-center ">
+	 <div class="col-4"></div>
+	   <div class="col-5">
+	   <button onClick="SetReaction()" class="btn btn-outline" onmouseenter="SetRInfo()"  onmouseleave="ClearInfo()">Set</button>
+  
+	  
+    </div>
+	 </div>
+
+	 <div class="row justify-content-center ">
+	<div class="col-2"></div>
+    <div class="col-5">
+      <p><a href="open_chat_bot" class="btn btn-outline" onmouseenter="ChatBuddyInfo()"  onmouseleave="ClearInfo()"  >   ChatBuddy</a></p>
+    </div>
+	
+	   <div class="col-5">
+     <p><a href="share_feedback" class="btn btn-outline" onmouseenter="ShareFeedback()"  onmouseleave="ClearInfo()" >Share-Fedback</a></p>
+    </div>
+	</div>
+	<div class="row justify-content-center ">
+	<div class="col-3"></div>
+ 
+  </div>
+
+  <br>
+   
+		
+	
+   </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+  </body>
+  
+  <script>
+  
+ var reaction_value="NEUTRAL";
+  function ShareFeedback()
+  {
+	document.getElementById("info").innerHTML="Share your Feedback to make us perform better!";
+  
+  }
+  
+  function changeImg()
+  {
+  //  imgname="{{IMG_NAME|safe}}"
+  //document.getElementById("page_image").src = imgname;
+	objimg=document.getElementById("page_image");
+	//alert(objimg.src)
+	var orstring=objimg.src;
+	orstring=orstring.replace("relationship.jpg", "chatbotmenu.jpg");
+	objimg.src=orstring;
+	alert(orstring);
+  }
+	function ChatBuddyInfo(){
+	
+	document.getElementById("info").innerHTML="An AI powered Chatbot to help you";
+	$('#samp1').removeClass('card text-dark bg-light mb-3');
+	$('#samp1').addClass('card text-white bg-dark mb-3');
+
+	//
+	
+	}
+	
+	function SetReaction()
+	{
+		//document.getElementById("info").innerHTML="Save this reaction to our relationship predictions";
+
+
+		$.ajax({
+		url: 'update_reaction',
+		type: "POST",
+		data: {'csrfmiddlewaretoken': '{{ csrf_token }}',"reaction_value":reaction_value,},
+		
+		dataType: "json",
+		//async:false,
+		
+		success: function(msg){
+		console.log(msg);
+			document.getElementById("info").innerHTML="Your feedback has been saved";
+			
+			
+		
+		},
+		error: function (error) {
+			console.log(`Error ${error}`);
+			//alert('are we here inside');
+			Gibool=false;
+		}
+	
+	
+	});
+	}
+	function changeImage(imgobj,newString)
+	{
+		var imgstr=imgobj.src;
+		var length1=imgstr.length;
+		var substr=imgstr.substr(length1-7,length1);
+		imgstr=imgstr.replace(substr, newString);
+		console.log(imgstr)
+		imgobj.src=imgstr;
+	
+		
+	}
+	
+	  function SetRInfo()
+  {
+		document.getElementById("info").innerHTML="Save your reaction"
+  }
+	
+	function ClearInfo()
+	{
+		document.getElementById("info").innerHTML="&nbsp";
+	
+	}
+	
+	var elem = document.querySelector('input[type="range"]');
+
+	var rangeValue = function(){
+	
+	eimgsrc=document.getElementById("emoimg");
+	var newValue = elem.value;
+	
+	var target = document.getElementById("desc");
+	//console.log(typeof newValue)
+	//console.log(!newValue.localeCompare("0"));
+	
+	
+	
+	if(!newValue.localeCompare("0"))
+	{
+		target.innerHTML ="SAD";
+		//eimgsrc.src="Sad_Emojii.jpg";
+		changeImage(eimgsrc,"SAD.jpg");
+		reaction_value="SAD";
+		
+	}
+	//target.innerHTML = newValue;
+	else if(!newValue.localeCompare("8"))
+	{
+		target.innerHTML ="ANGRY";
+		changeImage(eimgsrc,"ANG.jpg");
+		//eimgsrc.src="angry_emoji.png";
+		reaction_value="ANGRY";
+	}
+		else if(!newValue.localeCompare("16"))
+	{	target.innerHTML="SHOCKED"
+		// eimgsrc.src="shocked.png";
+		 changeImage(eimgsrc,"SHO.jpg");
+		 reaction_value="SHOCKED";
+	}
+	
+	
+
+	else if(!newValue.localeCompare("24"))
+	{	target.innerHTML ="NEUTRAL"
+		// eimgsrc.src="neutral_emj.png";
+		 changeImage(eimgsrc,"NEU.jpg");
+		 reaction_value="NEUTRAL";
+	}
+	else if(!newValue.localeCompare("32"))
+	
+	{	target.innerHTML ="COOL"
+		//eimgsrc.src="cool_emoji.png";
+		changeImage(eimgsrc,"COL.jpg");
+		reaction_value="COOL";
+	}
+	else if(!newValue.localeCompare("40"))
+	{	target.innerHTML="WONDERING"
+		// eimgsrc.src="wondering_emoji.png";
+		 changeImage(eimgsrc,"WON.jpg");
+		 reaction_value="WONDERING";
+	}
+
+	else if(!newValue.localeCompare("48"))
+	{	
+		target.innerHTML="HAPPY";
+		// eimgsrc.src ="Happy_Emojii.jpg";
+		 changeImage(eimgsrc,"HAP.jpg");
+		 reaction_value="HAPPY";
+	}
+			
+
+}
+elem.addEventListener("input", rangeValue);
+	/*
+	var slider = document.getElementById("reactslider");
+	
+	slider.oninput = function() {
+	val=this.value;
+	console.log("hey")
+	if(val==0)
+	{
+		document.getElementById("desc").innerHTML="Happy";
+	}
+	output.innerHTML = this.value;
+	}
+	*/
+  //,,sad,shocked,angry,
+  
+		//								sad,angry,shocked,confused,baffled,neutral,cool,wondering,smile,happy	
+		
+		
+  </script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

@@ -1,38 +1,142 @@
 {% extends 'base.html' %}
+   {% block css %}
+.card-wrapper {
+  margin-bottom: 30px;
+}
+.card-image .card .card-img-wrapper {
+  height: 100%;
+}
+.card-image .card .card-body {
+  display: none;
+}
+.card-image-title-description .card .card-img-wrapper {
+  max-height: 160px;
+}
+.card-image-title-description .card {
+  position: relative;
+  min-height: 300px;
+}
+.card-image-title-description .card .card-body {
+  height: auto;
+  position: relative;
+  top: 0;
+  margin-bottom: -70px;
+}
+.card-image-title-description .card:hover .card-body {
+  top: -70px;
+}
+.card-image-title-description .card .card-body .card-title {
+  margin-bottom: .75rem;
+}
+.card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  height: 100%;
+}
+.card:hover {
+  box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+.card-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+}
+.card-img-wrapper img {
+  transition: 1.5s ease;
+}
+.card:hover .card-img-wrapper img {
+  transform: scale(1.15);
+}
+.card-body .card-title {
+  margin-bottom: calc(50% + 20px);
+  transition: 1.5s ease;
+}
+.card:hover .card-body .card-title {
+  margin-bottom: .75rem;
+}
 
-  {% block nav_btn1 %}
-           <li class="nav-item active">
-          <a class="nav-link" href="Predicthp">Let's Predict</a>
-          </li>
-  {% endblock nav_btn1 %}
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #fff;
+  transition: 1.5s ease;
+}
+.card-content {
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 1.5s ease;
+}
+.card:hover .card-body {
+  height: 80%;
+}
+.card:hover .card-content {
+  bottom: 0;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, #ECE9E6 , #FFFFFF);
+}
+  {% endblock css %}
+
+ {% block nav_btn1 %}
+
+		<a href="get_previous_predictions" class="btn btn-outline-success btn-lg">MyPeeps Record</a>
+        {% endblock nav_btn1 %}
 {% block body %}
 
-<div class="container">
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-  {% for i in profile_info %}
-    <h5 class="card-title">Welcome {{i.user.first_name}}</h5>
-    
-    <span>
-    <p>Complete your bio</p>
 
-    </span>
-    <p>{{i.tribe}}</p>
-    <p>{{i.friends}}</p>
-    <p>{{i.user.username}}</p>
-    <p>{{i.user.email}}</p>
-    <p></p>
-    <p></p>
-    {% endfor %}
-  </div>
+<div class="container">
 <br>
-  </div>
-  <br>
-     <a href='update_profile'> 
-        <button class="btn-primary"> 
-            UPDATE PROFILE
-        </button> 
-    </a> 
+<button type="button" class="btn btn-warning btn-lg btn-block" onclick="window.location.href = 'Predicthp';">Predict and Analyze</button>
+<br>
+
+<br>
+  <button type="button" class="btn btn-danger btn-lg btn-block" onclick="window.location.href = 'Buddyhp';">My Helping Buddy</button>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Predict and Anlayze</h5>
+          <div class="card-content">
+            <p class="card-text"></p>
+            <a href="Predicthp" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">My helping Buddy</h5>
+          <p class="card-text"></p>
+          <a href="Buddyhp" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    
 </div>
+
+
+
     {% endblock body %}

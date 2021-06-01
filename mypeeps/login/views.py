@@ -4,6 +4,7 @@ import login.views
 from django.contrib.auth import authenticate, login,logout
 from django.contrib import messages
 from userprofile.models import *
+import os
 
 # Create your views here.
 
@@ -16,7 +17,7 @@ def my_login(request):
     if request.method=="POST":
         username=request.POST.get('username','')
         password=request.POST.get('password','')
-
+        print("88888888888887777777777--->",os.getcwd())
 
         print(username,password)
         user=authenticate(username=username,password=password)
@@ -36,9 +37,10 @@ def my_login(request):
             messages.error(request,"Invalid Credentials")
             return redirect('/') 
 
-def logout(request):
-
-    return HttpResponse("Logout")       
+def App_logout(request):
+    logout(request)
+    return redirect('homepage')
+          
 def signup(request):
     if request.method=="POST":
         mail =request.POST.get('email','')

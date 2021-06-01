@@ -1,16 +1,186 @@
 {% extends 'base.html' %}
 
+
+   {% block css %}
+.card-wrapper {
+  margin-bottom: 30px;
+}
+.card-image .card .card-img-wrapper {
+  height: 100%;
+}
+.card-image .card .card-body {
+  display: none;
+}
+.card-image-title-description .card .card-img-wrapper {
+  max-height: 160px;
+}
+.card-image-title-description .card {
+  position: relative;
+  min-height: 300px;
+}
+.card-image-title-description .card .card-body {
+  height: auto;
+  position: relative;
+  top: 0;
+  margin-bottom: -70px;
+}
+.card-image-title-description .card:hover .card-body {
+  top: -70px;
+}
+.card-image-title-description .card .card-body .card-title {
+  margin-bottom: .75rem;
+}
+.card {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  height: 100%;
+}
+.card:hover {
+  box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+.card-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+}
+.card-img-wrapper img {
+  transition: 1.5s ease;
+}
+.card:hover .card-img-wrapper img {
+  transform: scale(1.15);
+}
+.card-body .card-title {
+  margin-bottom: calc(50% + 20px);
+  transition: 1.5s ease;
+}
+.card:hover .card-body .card-title {
+  margin-bottom: .75rem;
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #fff;
+  transition: 1.5s ease;
+}
+.card-content {
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: 1.5s ease;
+}
+.card:hover .card-body {
+  height: 80%;
+}
+.card:hover .card-content {
+  bottom: 0;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(to right, #ECE9E6 , #FFFFFF);
+}
+  {% endblock css %}
 {% block body %}
 
 
 <div class="container">
+<br>
+<button type="button" class="btn btn-warning btn-lg btn-block" onclick="window.location.href = 'selfpred';">Self Relationship</button>
+<br>
 <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href = 'familypred';">Family Predictions</button>
+<br>
   <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href = 'friendpred';">Friend Classification</button>
+  <br>
   <button type="button" class="btn btn-info btn-lg btn-block" onclick="window.location.href = 'crushpred';">Crush Classification</button>
+  <br>
   <button type="button" class="btn btn-danger btn-lg btn-block" onclick="window.location.href = 'relatpred';">Realtionship Classification</button>
-
+<br>
   </div>
-
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">SelfPred</h5>
+          <div class="card-content">
+            <p class="card-text"></p>
+            <a href="selfpred" class="btn btn-primary">Let's Do it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">FamilyPred</h5>
+          <p class="card-text"></p>
+          <a href="familypred" class="btn btn-primary">Let's Do it</a>
+        </div>
+      </div>
+    </div>
+    </div>
+      <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Friend Pred</h5>
+          <div class="card-content">
+            <p class="card-text"></p>
+            <a href="friendpred" class="btn btn-primary">Do it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Crush Pred</h5>
+          <p class="card-text"></p>
+          <a href="crushpred" class="btn btn-primary">Let's Do it</a>
+        </div>
+      </div>
+    </div>
+    </div>
+     <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Relation Pred</h5>
+          <div class="card-content">
+            <p class="card-text"></p>
+            <a href="relatpred" class="btn btn-primary">Check it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+   
+</div>
 
 
 {% endblock body %}

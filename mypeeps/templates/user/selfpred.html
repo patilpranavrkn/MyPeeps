@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+<h1>Self Predictions</h1>
+</div>
+<br>
+<div class="container">
+<form action="Procselfpred" method="post">
+  {% csrf_token %}
+<div class="form-group">
+ <div class="row">
+    <div class="col">
+      <h5>What do you think of yourself?</h5><br>
+      <select class="form-control" id="opt1" name="opt1">
+        <option value="1">I Believe I’m an amazing person.</option>
+        <option value="2"> I think I’m nice</option>
+        <option value="3">I know I’m different.</option>
+        <option value="4">Guess I’m Okay</option>
+        <option value="5">I guess I’m like everyone else.</option>
+        <option value="6">I’m bad .</option>
+        <option value="7">I’m bad and people guess avoid me</option>
+
+
+
+
+
+    </select>
+    </div>
+    <div class="col">
+    <h5>In which mood you’re in most of the time.</h5><br>
+      <select class="form-control" id="opt2" name="opt2">
+        <option value="1">Peaceful</option>
+        <option value="2">Very Happy</option>
+        <option value="3">Delighted</option>
+        <option value="4">Normal</option>
+        <option value="5">Sad</option>
+        <option value="6">Very Sad</option>
+        <option value="7">Depressed</option>
+        
+
+    </select>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <h5>How’s currently you’re life going on?</h5><br><br>
+      <select class="form-control" id="opt3" name="opt3">
+        <option value="1">Great</option>
+        <option value="2">Good</option>
+        <option value="3">Having ups and downs</option>
+        <option value="4">Bad</option>
+        <option value="5">Worse</option>
+    
+
+    </select>
+    </div>
+    <div class="col">
+    <h5>How often you can achieve your goals or any task you wish to complete?</h5><br>
+      <select class="form-control" id="opt4" name="opt4">
+        <option value="1"> All the times</option>
+        <option value="2">Most of the time.</option>
+        <option value="3">Usually</option>
+        <option value="4">Not most of times.</option>
+        <option value="5">Never</option>
+
+
+    </select>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <h5>If someone insults or gets angered on you how much time it gets in your mind?</h5><br>
+      <select class="form-control" id="opt5" name="opt5">
+        <option value="1">I’m not bothered(</option>
+        <option value="2">Not much</option>
+        <option value="3">Yes for sometime</option>
+        <option value="4">It’s quite less</option>
+    </select>
+    </div>
+    <div class="col">
+    <h5>What you do when someone avoids you?</h5><br><br>
+      <select class="form-control" id="opt6" name="opt6">
+        <option value="1">Actually Don’t care</option>
+        <option value="2">I avoid them back.</option>
+        <option value="3">I try to understand the issue</option>
+        <option value="4">I beg them and ask that why they’re avoiding me?</option>
+        <option value="5">I tend to get sad</option>
+    </select>
+
+
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <h5>If something happennin is occurring in other’s life does FOMO hit you?</h5><br>
+      <select class="form-control" id="opt7" name="opt7">
+        <option value="1">Not Bothered at all</option>
+        <option value="2">Less Bothered.</option>
+        <option value="3">I’m bothered.</option>
+        <option value="4">I suddenly feel something’s in my life is missing.</option>
+
+    </select>
+    </div>
+    <div class="col">
+    <h5>Are You addicted to any intoxicants?</h5><br><br>
+      <select class="form-control" id="opt8" name="opt8">
+        <option value="1">Nothing as such</option>
+        <option value="2">Occassionally</option>
+        <option value="3">I do have a regular habbit</option>
+        <option value="4">Addictted</option>
+    </select>
+    </div>
+  </div>
+
+
+
+
+   <br>
+   <div class="row">
+    <div class="col-5"></div>
+  <div class="col-4"><button type="submit" onclick="window.location.href = 'Procselfpred';" class="btn btn-danger">Analyze</div>
+</div>
+
+</div>
+</form>
+</div>
+
+{% endblock body %}

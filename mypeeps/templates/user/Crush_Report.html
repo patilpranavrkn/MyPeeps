@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+
+<div class="container">
+
+<div class="row align-items-center">
+<div class="col-4">
+  </div>
+<h2 class="text-center">Our Analysis</h2>
+</div> 
+<div class="row align-items-center">
+ <div class="col-5">
+ <h2 class="text-center">{{rel_type_text}}</h2>
+ </div>
+ 
+<div class="col-5">
+  <img src="{% static 'sample.jpg' %}" class="img-responsive" alt="Cinque Terre" width="304" height="236"> 
+ </div>
+ </div>
+<div class="row " >
+<div class="col">
+  <table class="table table-hover">
+    
+  <thead>
+ 
+    <tr class="table-warning">
+ 
+      <th class="text-center">The Current most likely scenario</th>
+
+     </tr>
+
+  </thead>  
+
+  <tbody>
+  {% for i in A1 %}
+  <tr>
+  
+  <td class="text-center">{{i}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>  
+  </table>
+</div>
+</div>
+<div class="row" >
+<div class="col">
+  <table class="table table-hover">
+    
+  <thead>
+  
+    <tr class="table-success">
+ 
+      <th class="text-center">The Best thing You can Do</th>
+
+     </tr>
+
+  </thead>  
+
+  <tbody>
+  {% for i in A2 %}
+  <tr>
+  
+  <td class="text-center">{{i}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>  
+  </table>
+  </div>
+</div>
+<br>
+<div class="row" >
+  <table class="table table-hover">
+    
+  <thead>
+ 
+    <tr class="table-danger">
+ 
+      <th class="text-center">Things you Should Avoid</th>
+
+     </tr>
+
+  </thead>  
+
+  <tbody>
+  {% for i in A3 %}
+  <tr>
+  
+  <td class="text-center">{{i}}</td>
+  </tr>
+  {% endfor %}
+  </tbody>  
+  </table>
+</div>
+
+  <br>
+  <div class="row" >
+  
+  <div class="col-2">
+  
+  </div>
+  <div class="col-4">
+  <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location.href = 'CrushBuddy';">Predict Again</button>
+  </div>
+  <div class="col-4">
+  <button type="button" class="btn btn-danger btn-lg btn-block" onclick="window.location.href = 'CrushBuddy';">Let's go to Buddy</button>
+  </div>
+  </div>
+<br>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,373 @@
+<html>
+{% load static %}
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="{% static 'css/all.css' %}" rel="stylesheet">
+    <style>
+ optgroup { font-size:25px; }
+	  
+	  .modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-content{
+	       width: 450px;
+ 
+          height:350px !important;
+		  border:DarkViolet 16px solid;
+		  border-radius: 25px
+
+
+}
+select {
+   font-size: 100px;
+}
+ <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script> 
+    </style>
+  </head>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h2>MyPeeps<h2></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+  </div>
+</nav>
+
+
+  
+
+  <body onload="myFunction_open1()">
+		<div class="container">
+
+  
+    
+  <div class="modal fade" id="nameModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+    
+        <div class="modal-body modb">
+		<h2>So whose your crush?<h2>
+          <input type=text id="namei" placeholder="enter............">
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+  
+      <div class="modal fade" id="infoModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+    
+        <div class="modal-body modb">
+		<h2>Choose Any of the Options for The Question Asked. <h2>
+          
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+  
+
+   <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+
+        <div class="modal-body">
+		<h5>How Does Your Crush Respond to You? </h5><br>
+	<select class="form-control" id="opt1" name="opt1">
+	
+	<optgroup>
+	        <option value="1">Is Attentiv</option>
+        <option value="2">Positively</option>
+        <option value="3">As of Good Friend</option>
+        <option value="4">Apathetically</option>
+        <option value="5">Avoids me</option>
+		</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  </div>
+ </div>
+    <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+
+        <div class="modal-body">
+		<h5>Does the person know that you’re Interested in them?</h5><br>
+	<select class="form-control" id="opt2" name="opt2">
+	
+	<optgroup>
+	        <option value="1">Yes</option>
+        <option value="2">No</option>
+        <option value="3">Maybe</option>
+		</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+ </div>
+ </div>
+   <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+
+        <div class="modal-body">
+		<h5>How well that the person knows you?</h5><br>
+	<select class="form-control" id="opt3" name="opt3">
+	
+	<optgroup>
+	        <option value="1">Very Well</option>
+        <option value="2">Quite well</option>
+        <option value="3">Okayish</option>
+        <option value="4">Less</option>
+        <option value="5">Very Less</option>
+		</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  </div>
+ </div>
+   <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+
+        <div class="modal-body">
+		<h5>Has Previously the person been rude/insulted/Avoided in need or any misbehavior  to you? </h5><br>
+	<select class="form-control" id="opt4" name="opt4">
+	
+	<optgroup>
+	        <option value="1">No</option>
+        <option value="2">Yes</option>
+        <option value="3">Maybe</option>
+		</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  </div>
+ </div>
+   <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+
+        <div class="modal-body">
+		<h5>IS the person currently In any relationship?</h5><br>
+	<select class="form-control" id="opt5" name="opt5">
+	
+	<optgroup>
+	        <option value="1">No</option>
+        <option value="2">Yes</option>
+        <option value="3">Maybe</option>
+		</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+ <button type="button" class="btn btn-primary"  onclick=Analyze()>Analyze <i class="fab fa-searchengin"></i></button><br>
+		  
+        </div>
+ </div> 
+ </div>
+ </div>
+  <div class="modal" tabindex="-1" role="dialog" id="newm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Get Result for your Relationship?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="AnalyzeAjax()">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  </body>
+  <script>
+	var modelnum=1;
+	var valueArr=new Array(5);
+	var innerTextArr=new Array(5);
+	var seletIndex=new Array(5);
+	
+
+
+	var input = document.getElementById("namei");
+	var pname;
+	input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+	
+	
+	pname=input.value;
+	$("#nameModal").modal('hide');
+	myFunction_open2()
+	
+  
+  }
+});
+
+function Analyze()
+{
+	valueArr[modelnum-1]=selectvar.value;
+		
+		seletIndex[modelnum-1]=selectvar.selectedIndex;
+		alert(valueArr);
+		$("#newm").modal('show');
+
+
+}
+
+	function AnalyzeAjax()
+	{
+		named=document.getElementById("namei");
+	
+		$.ajax({
+		type: "POST",
+		data: {'csrfmiddlewaretoken': '{{ csrf_token }}',"arrayval[]":valueArr,"pred_name":named.value},
+		url: "crushpredjson",
+		success: function(msg){
+		if(msg.success=="true")
+		{
+		window.location.href = "Proccrushpred";
+		}
+		else
+		{
+			alert("error occurred");
+		}
+		
+   }
+});
+	
+	}
+	function Next()
+	{
+		
+		selectvar=(document.getElementById("opt"+modelnum));
+		valueArr[modelnum-1]=selectvar.value;
+	
+		seletIndex[modelnum-1]=selectvar.selectedIndex;
+		$("#myModal"+modelnum).modal('hide');
+		modelnum++;
+		$("#myModal"+modelnum).modal('show');
+		console.log(valueArr,innerTextArr)
+		
+		
+		
+	}
+	
+	function Prev()
+	{
+	$("#myModal"+modelnum).modal('hide');
+	
+		if(modelnum==1)
+		{
+			$("#nameModal").modal('show');
+			input.value=pname;
+		}
+		else
+		{
+			modelnum--;
+		
+			$("#myModal"+modelnum).modal('show');
+			selectvar=(document.getElementById("opt"+modelnum));
+			selectvar.selectedIndex=seletIndex[modelnum-1];
+			
+		}		
+		
+	}
+	
+	function myFunction_open3()
+	{
+		//  $.when($('infoModal').fadeOut(500))
+  // .then(function(){
+     // $("#myModal1").modal('show');
+   //});
+	
+	//$("#myModal1").modal('show');
+$("#myModal1").modal('show');
+
+	
+	}
+  function myFunction_open2()
+  {
+ 
+  //$("#infoModal").modal('show');
+  //myFunction_open3();
+  $("#myModal1").modal('show');
+	 
+  }
+  function myFunction_open1()
+  {
+	$("#nameModal").modal('show');
+  }
+  function Close1()
+  {
+	
+	$("#nameModal").modal('hide');
+	$("#myModal1").modal('show');
+  }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

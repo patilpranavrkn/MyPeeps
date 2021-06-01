@@ -8,10 +8,17 @@
 
 <br>
 
-
+<div class="container">
+<form action="Procfriendpred" method="post">
 <div class="form-group">
+  {% csrf_token %}
 <h4>Enter Name to Identify the Person.</h4>
-<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+<input list="fname" name="pername" class="form-control"  style="width: 650px;" value="friendname"/></label>
+<datalist id="fname">
+  <option value="fname1">
+ 
+</datalist>
+<br>
 <br>
 
 <div class="row">
@@ -39,6 +46,7 @@
     </select>
     </div>
   </div>
+  <br>
   <div class="row">
     <div class="col">
       <h5>Time spent together</h5><br>
@@ -62,6 +70,7 @@
     </select>
     </div>
   </div>
+  <br>
   <div class="row">
     <div class="col">
       <h5>Do you feel like avoiding the person?</h5><br>
@@ -86,6 +95,7 @@
     </select>
     </div>
   </div>
+  <br>
   <div class="row">
     <div class="col">
       <h5>Helpful</h5><br>
@@ -112,6 +122,7 @@
     </select>
     </div>
   </div>
+  <br>
   <div class="row">
     <div class="col">
       <h5>Your Life</h5><br>
@@ -136,6 +147,7 @@
     </select>
     </div>
   </div>
+  <br>
    <div class="row">
     <div class="col">
       <h5>Intoxicant’s</h5><br>
@@ -158,6 +170,7 @@
     </select>
     </div>
   </div>
+  <br>
    <div class="row">
     <div class="col">
       <h5>Your current mental state</h5><br>
@@ -182,8 +195,9 @@
     </select>
     </div>
   </div>
+  <br>
    <div class="row">
-    <div class="col-5">
+    <div class="col-6">
       <h5>Agree Upon Things</h5><br>
       <select class="form-control" id="opt15" name="opt15">
         <option value="1">Always</option>
@@ -194,12 +208,15 @@
       
     </select>
     </div>
+    </div>
       <br>
    <div class="row">
     <div class="col-5"></div>
-  <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+  <div class="col-4"><button type="submit" onclick="window.location.href = 'Procfriendpred';" class="btn btn-danger">Analyze</div>
 </div>
    
+  </div>
+  </form>
   </div>
 
 {% endblock body %}

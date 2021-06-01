@@ -1,0 +1,445 @@
+<html>
+{% load static %}
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="{% static 'css/all.css' %}" rel="stylesheet">
+    <style>
+ optgroup { font-size:25px; }
+	  
+	  .modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-content{
+	       width: 450px;
+ 
+          height:350px !important;
+		  border:DarkViolet 16px solid;
+		  border-radius: 25px
+
+
+}
+select {
+   font-size: 100px;
+}
+ <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script> 
+    </style>
+  </head>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h2>MyPeeps<h2></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+  </div>
+</nav>
+
+
+  
+
+  <body onload="myFunction_open2()">
+		<div class="container">
+
+  
+    
+  <div class="modal fade" id="nameModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+    
+        <div class="modal-body modb">
+		<h2>Enter the name of your friend?<h2>
+          <input type=text id="namei" placeholder="enter............">
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+  
+
+  
+  
+
+	    <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+<div class="modal-content">
+
+        <div class="modal-body">
+		<h5>What do you think of yourself?</h5><br>
+	<select class="form-control" id="opt1" name="opt1">
+	
+	<optgroup>
+		 <option value="1">I Believe I’m an amazing person.</option>
+        <option value="2"> I think I’m nice</option>
+        <option value="3">I know I’m different.</option>
+        <option value="4">Guess I’m Okay</option>
+        <option value="5">I guess I’m like everyone else.</option>
+        <option value="6">I’m bad .</option>
+        <option value="7">I’m bad and people guess avoid me</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+ 	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+	  <h5>In which mood you’re in most of the time.</h5><br>	
+	<select class="form-control" id="opt2" name="opt2">
+	
+	<optgroup>
+		        <option value="1">Peaceful</option>
+        <option value="2">Very Happy</option>
+        <option value="3">Delighted</option>
+        <option value="4">Normal</option>
+        <option value="5">Sad</option>
+        <option value="6">Very Sad</option>
+        <option value="7">Depressed</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+ 	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+		 <h5>How’s currently you’re life going on?</h5><br>
+	<select class="form-control" id="opt3" name="opt3">
+	
+	<optgroup>
+		        <option value="1">Great</option>
+        <option value="2">Good</option>
+        <option value="3">Having ups and downs</option>
+        <option value="4">Bad</option>
+        <option value="5">Worse</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+	  <h5>How often you can achieve your goals or any task you wish to complete?</h5><br>	
+	<select class="form-control" id="opt4" name="opt4">
+	
+	<optgroup>
+		    <option value="1"> All the times</option>
+        <option value="2">Most of the time.</option>
+        <option value="3">Usually</option>
+        <option value="4">Not most of times.</option>
+        <option value="5">Never</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+	   <h5>If someone insults or gets angered on you how much time it gets in your mind?</h5><br>	
+	<select class="form-control" id="opt5" name="opt5">
+	
+	<optgroup>
+		 <option value="1">I’m not bothered(</option>
+        <option value="2">Not much</option>
+        <option value="3">Yes for sometime</option>
+        <option value="4">It’s quite less</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+	<h5>What you do when someone avoids you?</h5><br>	
+	<select class="form-control" id="opt6" name="opt6">
+	
+	<optgroup>
+		        <option value="1">Actually Don’t care</option>
+        <option value="2">I avoid them back.</option>
+        <option value="3">I try to understand the issue</option>
+        <option value="4">I beg them and ask that why they’re avoiding me?</option>
+        <option value="5">I tend to get sad</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal7" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+		 <h5>If something happennin is occurring in other’s life does FOMO hit you?</h5><br>
+	<select class="form-control" id="opt7" name="opt7">
+	
+	<optgroup>
+		       <option value="1">Not Bothered at all</option>
+        <option value="2">Less Bothered.</option>
+        <option value="3">I’m bothered.</option>
+        <option value="4">I suddenly feel something’s in my life is missing.</option>
+
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+  	   </div>
+ </div>
+ 	    <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+	   <h5>Are You addicted to any intoxicants?</h5><br><br>	
+	<select class="form-control" id="opt8" name="opt8">
+	
+	<optgroup>
+		<option value="1">Nothing as such</option>
+        <option value="2">Occassionally</option>
+        <option value="3">I do have a regular habbit</option>
+        <option value="4">Addictted</option>
+	</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+ <button type="button" class="btn btn-primary"  onclick=Analyze()>Analyze <i class="fab fa-searchengin"></i></button><br>
+		  
+        </div>
+ </div>
+  	   </div>
+ </div>
+    <div class="modal" tabindex="-1" role="dialog" id="newm">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Get Result for your Relationship?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="AnalyzeAjax()">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  </body>
+  <script>
+	var modelnum=1;
+	var valueArr=new Array(4);
+	var innerTextArr=new Array(4);
+	var seletIndex=new Array(4);
+	
+
+
+	var input = document.getElementById("namei");
+	var pname;
+	input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+	
+	
+	pname=input.value;
+	$("#nameModal").modal('hide');
+	myFunction_open2()
+	
+  
+  }
+});
+
+function Analyze()
+{
+	valueArr[modelnum-1]=selectvar.value;
+		
+		seletIndex[modelnum-1]=selectvar.selectedIndex;
+		alert(valueArr+"Here it is");
+		$("#newm").modal('show');
+
+
+}
+
+	function AnalyzeAjax()
+	{
+		//named=document.getElementById("namei");
+	
+		$.ajax({
+		type: "POST",
+		data: {'csrfmiddlewaretoken': '{{ csrf_token }}',"arrayval[]":valueArr,},
+		url: "selfpredjson",
+		success: function(msg){
+		if(msg.success=="true")
+		{
+		window.location.href = "Procselfpred";
+		}
+		else
+		{
+			alert("error occurred");
+		}
+		
+   }
+});
+	}
+	function Next()
+	{
+		
+		selectvar=(document.getElementById("opt"+modelnum));
+		valueArr[modelnum-1]=selectvar.value;
+
+		seletIndex[modelnum-1]=selectvar.selectedIndex;
+		$("#myModal"+modelnum).modal('hide');
+		modelnum++;
+		$("#myModal"+modelnum).modal('show');
+		console.log(valueArr,innerTextArr)
+		
+		
+		
+	}
+	
+	function Prev()
+	{
+	$("#myModal"+modelnum).modal('hide');
+	
+		if(modelnum==1)
+		{
+			$("#nameModal").modal('show');
+			input.value=pname;
+		}
+		else
+		{
+			modelnum--;
+		
+			$("#myModal"+modelnum).modal('show');
+			selectvar=(document.getElementById("opt"+modelnum));
+			selectvar.selectedIndex=seletIndex[modelnum-1];
+			
+		}		
+		
+	}
+	
+	function myFunction_open3()
+	{
+		//  $.when($('infoModal').fadeOut(500))
+  // .then(function(){
+     // $("#myModal1").modal('show');
+   //});
+	
+	//$("#myModal1").modal('show');
+$("#myModal1").modal('show');
+
+	
+	}
+  function myFunction_open2()
+  {
+ 
+  //$("#infoModal").modal('show');
+  //myFunction_open3();
+  $("#myModal1").modal('show');
+	 
+  }
+  function myFunction_open1()
+  {
+	$("#nameModal").modal('show');
+  }
+  function Close1()
+  {
+	
+	$("#nameModal").modal('hide');
+	$("#myModal1").modal('show');
+  }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>

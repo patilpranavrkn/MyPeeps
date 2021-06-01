@@ -8,11 +8,19 @@
 
 <br>
 
-
+<div class="container">
+<form action="Procrelatpred" method="post">
 <div class="form-group">
+{% csrf_token %}
 <h4>Enter Name to Identify the Person.</h4>
-<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+<input list="fname" name="pername" class="form-control"  style="width: 650px;" value="friendname"/></label>
+<datalist id="fname">
+  <option value="fname1">
+ 
+</datalist>
 <br>
+<br>
+
  <div class="row">
     <div class="col">
       <h5>How you feel in the presence of your partner?</h5><br>
@@ -31,14 +39,14 @@
     <h5>How do you feel in the absence of your partner? (FAP)</h5><br>
       <select class="form-control" id="opt2" name="opt2">
         <option value="1">His presence/absence doesn’t affect me.</option>
-        <option value="2">Lonely.</option>
+        <option value="2">Lonely</option>
         <option value="3">Sad</option>
         <option value="4">Angry</option>
        
     </select>
     </div>
   </div>
-
+  <br>
    <div class="row">
     <div class="col">
       <h5>Communication between the partner and you.</h5><br>
@@ -60,10 +68,10 @@
     </select>
     </div>
   </div>
-
+  <br>
    <div class="row">
     <div class="col">
-      <h5>What most of your conversations about?</h5><br>
+      <h5>What most of your conversations about?</h5><br><br>
       <select class="form-control" id="opt5" name="opt5">
         <option value="1">Future planning,Ideas and Art</option>
         <option value="2">Intimate romantic and supporting talks</option>
@@ -82,7 +90,7 @@
     </select>
     </div>
   </div>
-
+  <br>
    <div class="row">
     <div class="col">
       <h5>Do you  tend to get jealous or possessive about partner?</h5><br>
@@ -104,7 +112,7 @@
     </select>
     </div>
   </div>
-
+  <br>
    <div class="row">
     <div class="col">
       <h5>Intimacy</h5><br>
@@ -127,9 +135,9 @@
     </select>
     </div>
   </div>
-
+  <br>
    <div class="row">
-    <div class="col">
+    <div class="col-6">
       <h5>Do you  seeks partner’s affection and Validation.</h5><br>
       <select class="form-control" id="opt11" name="opt11">
         <option value="1">Strongly Not Agree</option>
@@ -141,13 +149,13 @@
     </select>
     </div>
     </div>
-
+  <br>
     <div class="row">
     <div class="col-5"></div>
-    <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+    <div class="col-4"><button type="submit" onclick="window.location.href = 'Procrelatpred';" class="btn btn-danger">Analyze</div>
 </div>
-
-
+</div>
+</form>
  </div>
 
 {% endblock body %}

@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+		.sellermessage {
+    background:DodgerBlue;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 5px;
+	font-weight: bold;
+	font-size: large;
+	opacity:0.9;
+	
+}
+
+.buyermessage {
+	background: #FFFF00;
+	padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 5px;
+	font-weight: bold;
+	font-size: large;
+	opacity:0.9;
+	
+}
+
+#box {
+	background: #99FF99;
+	padding: 3px;
+    border-radius: 15px;
+	opacity:0.9;
+
+}
+.buyerblock {
+    text-align: right;
+}
+
+#input {
+    width: 100%;
+    border-radius: 15px;
+    box-sizing: border-box;
+	font-weight: bold;
+	font-size: large;
+}
+#hidden{
+	display: none;
+}
+.spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031; /* High z-index so it is on top of the page */
+  top: 50%;
+  right: 50%; /* or: left: 50%; */
+  margin-top: -..px; /* half of the elements height */
+  margin-right: -..px; /* half of the elements widht */
+}
+ <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script> 
+    </style>
+  </head>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h2>MyPeeps<h2></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+  </div>
+</nav>
+
+  
+
+  <body>
+<div class="container">
+	<div id="box"> 
+		<!-- this is the main chat box where ai seller bot and buyer will communicate -->
+<div id="messages">
+	<div class="sellerblock">
+		<div class="sellermessage">
+		Hey Buddy , how Can I help with advicing in life and Relationships ?</div>
+		<!-- write here anything you wish -->
+	</div>
+
+	<!-- 
+	<div class="buyerblock">
+		<div class="buyermessage">Mobile phone</div>
+	</div> -->
+	<!-- these blocks are just for example -->
+
+	<!-- now the hidden blocks  -->
+</div>
+<div id="hidden">
+	<div id="sellerblock" class="sellerblock">
+		<div class="sellermessage">
+		Hi,ddd What do you want to buy?</div>
+		<!-- write here anything you wish -->
+	</div>
+	<div id="buyerblock" class="buyerblock">
+		<div class="buyermessage">Mobile phone</div>
+	</div>
+	
+</div>
+  <div class="row">
+    <div class="col-10">
+<input id="input" onkeyup="taketheinput(event)">
+</div>
+<div class="col-2"><button onclick="SendButton()" ><i class="material-icons" style="font-size:36px;color:black">send</i></button></div>
+		
+	</div>
+
+</div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+messages = document.getElementById('messages')
+input = document.getElementById('input')
+sellerblock = document.getElementById('sellerblock')
+buyerblock = document.getElementById('buyerblock')
+
+msgno = 0
+
+products = {
+"mobile":{price:12000},
+"tomato":{price:30},
+"rice":{price:60},
+"book":{price:500},
+"laptop":{price:25000},
+"chair":{price:350}
+}
+
+function SendButton()
+{
+
+		messages.innerHTML += buyerblock.outerHTML
+		// and change its id
+		msgno += 1
+		messages.lastChild.id = msgno
+		//now changing its text
+		messages.lastChild.childNodes[1].textContent = input.value
+		// finally process the input 
+		processinput(input.value.toLowerCase())
+		input.value = ""
+		//	<div class="spinner-border spinner-border-sm"></div>
+
+}
+function taketheinput(event) {
+	// here is the js code for input processing
+	//if they hit the enter key 
+	if(event.key === "Enter"){
+// create a buyer message block
+		messages.innerHTML += buyerblock.outerHTML
+		// and change its id
+		msgno += 1
+		messages.lastChild.id = msgno
+		//now changing its text
+		messages.lastChild.childNodes[1].textContent = input.value
+		// finally process the input 
+		processinput(input.value.toLowerCase())
+		input.value = ""
+
+	}
+}
+
+function processinput(inputval){
+
+	if(inputval!=""){
+		messages.innerHTML += sellerblock.outerHTML
+		// and change its id
+		msgno += 1
+		messages.lastChild.id = msgno
+		//now changing its text
+	//	messages.lastChild.childNodes[1].textContent = reply(inputval)	
+	//messages.lastChild.childNodes[1].textContent = "mock_reply"
+	reply(inputval)	
+	}
+
+}
+
+
+
+function reply(inputval) {
+/*
+	result = inputval.match(/(how)|(\w+)/g)
+	alert("here")
+	if(result.includes("how")){
+		return "fine"
+	}
+	if(result.includes("price")){
+		return recentproduct.price
+	}
+	
+	a="";
+	result.forEach(function(product){
+		if(products.hasOwnProperty(product)){
+			a = "Yes we have " + product
+			recentproduct = products[product]
+		}
+	})
+	if(a){
+		return a;
+	}
+
+
+	return "Sorry " + inputval + " is not available!"
+	// if (inputval === "How are you?") {
+	// 	return "I am fine"
+	// }
+	*/
+	alert("damn");
+	
+	getInputFromBECB(inputval);
+}
+
+function getInputFromBECB(inputval)
+{
+
+messages.lastChild.childNodes[1].textContent ="mock reply";
+		console.log("inside")
+		$.ajax({
+		url: 'checkgibber',
+		type: "POST",
+		async:false,
+		data: {'csrfmiddlewaretoken': '{{ csrf_token }}',
+			"quest": inputval,
+			
+		},
+		dataType: "json",
+		success: function (data) {
+		alert("here after this")
+		//	alert(data.is_gibber);
+
+			 //ajaxCallBack();
+			//Gibool=true;
+			//alert("here I am")
+			console.log(data)
+			messages.lastChild.id = msgno
+			messages.lastChild.childNodes[1].textContent =data.result;
+			//console.log(messages.lastChild.childNodes[1].textContent);
+			//alert(data);
+		},
+		error: function (error) {
+			console.log(`Error ${error}`);
+			//alert('are we here inside');
+			Gibool=false;
+		}
+
+	});
+}	
+</script>
+</html>

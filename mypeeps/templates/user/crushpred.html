@@ -7,14 +7,23 @@
 </div>
 
 <div class="container">
+<form action="Proccrushpred" method="post">
 <h2>Answer the following questions</h2>
 <br>
 
 
 <div class="form-group">
+  {% csrf_token %}
 <h4>Enter Name to Identify the Person.</h4>
-<input type="text" class="form-control" id="entername" aria-describedby="emailHelp" placeholder="Enter name for identidication" name="entername">
+
+<input list="fname" name="pername" class="form-control"  style="width: 650px;" value="friendname"/></label>
+<datalist id="fname">
+  <option value="fname1">
+ 
+</datalist>
 <br>
+
+
 
 <div class="row">
     <div class="col">
@@ -24,7 +33,7 @@
         <option value="2">Positively</option>
         <option value="3">As of Good Friend</option>
         <option value="4">Apathetically</option>
-        <option value="5">5.Avoids me</option>
+        <option value="5">Avoids me</option>
         
     </select>
     </div>
@@ -41,7 +50,7 @@
   <br>
   <div class="row">
     <div class="col">
-      <h5>How well that the person knows you?</h5><br>
+      <h5>How well that the person knows you?</h5><br><br>
       <select class="form-control" id="opt3" name="opt3">
         <option value="1">Very Well</option>
         <option value="2">Quite well</option>
@@ -74,8 +83,9 @@
   <br>
    <div class="row">
     <div class="col-5"></div>
-  <div class="col-4"><button type="submit" class="btn btn-danger">Analyze</div>
+  <div class="col-4"><button type="submit" onclick="window.location.href = 'Proccrushpred';" class="btn btn-danger">Analyze</div>
 </div>
+</form>
 </div>
 
 {% endblock body %}

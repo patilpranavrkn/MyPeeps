@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+	
+	<style>
+		.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+	}
+	.shadow-textarea textarea.form-control {
+    padding-left: 0.8rem;
+	}
+	</style>
+  </head>
+  <body>
+	  <h1 class="display-3" style= "text-align: center;">Share with us your valuable feedback</h1>
+	  
+	  <div class="container">
+		<form  method="POST" action="save_feedback">
+		    {% csrf_token %}
+		
+		<div class="form-group">
+			<h4> How much were the Questions asked in Analysis made sense?</h4>
+			<div class="radio">
+			<label><input type="radio" name="optradio" checked> Very Much</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="optradio"> Yes Made Sense</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="optradio" > Can't Actually Tell</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="optradio"> Could Be Better</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="optradio" > Made No sense at all</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<h4> What was your Reaction when you read the analysis Report?</h4>
+			<div class="radio">
+			<label><input type="radio" name="optradio1" checked> Totally Shocking!</label>
+			</div>
+			<div class="radio">
+			<label><input type="radio" name="optradio1"> Didn't expect that</label>
+			</div>
+			<div class="radio">
+			<label><input type="radio" name="optradio1"> I Doubted this will happen</label>
+			</div>
+				<div class="radio">
+			<label><input type="radio" name="optradio1"> Analysis report is quite True</label>
+			</div>
+					<div class="radio">
+			<label><input type="radio" name="optradio1"> Analysis report is exactly I assumed</label>
+			</div>
+		</div>
+			<div class="form-group shadow-textarea">
+			<label for="exampleFormControlTextarea6"><h4>You Shpuld share your thoughts with us ! Advice and suggestions are Welcome!</h4></label>
+				<textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+			</div>
+		  <div class="form-group">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	  </div>
+		</form>
+	
+	  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
