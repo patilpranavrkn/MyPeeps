@@ -5,66 +5,74 @@ WUDD
 
 True_Friend
 AR
-He is true friend
+He is true friend.#
+You might be feeling good in his/her presence.#
 AU
-You could be a good person to be deserved a such friend
+You could be a good person to be deserved a such friend.#
+You are a nice person#
 WUD
-Keep the frindship going bruh
+Keep the frindship going bruh#
+Learn and respect friendship and grow together#
 WUDD
-Avoiding the friendship
+Avoiding the friendship.#
+No thelping each other out#
 Strategist
 AR
-Nice 
+Nice your friend sees to be a planeer and a very forward thinker#
 AU
-You can be aplanner
+You can be aplanner#
 WUD
-Not stop making plans
+Not stop making plans#
 WUDD
-Never risking what the friends plans are
+Never risking what the friends plans are#
 Situational
 AR
-He comes to meet som of the times
+He comes to meet som of the times#
 AU
-You also might not be in actual need of frienship that much
+You also might not be in actual need of frienship that much#
 WUD
-Be chill
+Be chill#
 WUDD
-Getting angry if you think that your friends are selfish
-Occassional
+Getting angry if you think that your friends are selfish#
+Occassional#
 AR
-He comes to meet som of the times
+He comes to meet som of the times#
 AU
-You also might not be in actual need of frienship that much
+You also might not be in actual need of frienship that much#
 WUD
-Be chill
+Be chill#
 WUDD
-Getting angry if you think that your friends are selfish
+Getting angry if you think that your friends are selfish#
 
 Leech
 AR
-Person is an energy vamp
+Person is an energy vamp#
+you feel drained in his/her presence.#
+you feeling ike running away from that person#
 AU
-You might be bored or avoiding the person
+You might be bored or avoiding the person#
 WUD
-Not give more time to them
+Not give more time to them#
 WUDD
-Not giving more time
+Not giving more time#
 Kindered_spirit
 AR
-Nice friend to hang out with sometimes
+Nice friend to hang out with sometimes#
 AU
-You are a smart person
+You are a smart person#
 WUD
-hangot and share deep topics
+hangot and share deep topics#
 WUDD
-doing stupid things
+doing stupid things#
 Good_Time_Charlie
 AR
-Is a friend who hangs out for fun mostly
+Is a friend who hangs out for fun mostly.#
+Could be busy with his/her own stuff .Nohing to take personally.#
 AU
-You don't have much to do in your life
+You don't have much to do in your life#
 WUD
-Get busy with your life
+Get busy with your life.#
+Do stuff which would interest you more#
 WUDD
 Not get busy with life
 Acquaintance
