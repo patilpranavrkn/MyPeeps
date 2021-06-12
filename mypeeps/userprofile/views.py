@@ -111,7 +111,7 @@ def profilep(request):
     
   
    
-    return  render(request,'user/userProfile.html',data_key)
+    return  render(request,'user/menu_rn_a.html',data_key)
 
 def update_profile(request):
     profile_obj=Profile.objects.filter(user=request.user)
@@ -295,6 +295,7 @@ def Procfriendpred(request):
     return HttpResponse("Done")
 '''
 def ReadlinesFromInfoFile(filename,dir):
+    print(filename,"&&&&&&&&fnameis")
     export_path = os.path.join(os.getcwd(),"InfoFiles",dir, filename+".txt")
     with open(export_path) as f:
         txt_data=f.read()
@@ -486,6 +487,7 @@ def save_reaction(request):
 
 def Procselfpred(request):
     
+    page_title="The Relationship you have with your self is"
     opinion=[]
     values_arr=request.session["user_values_arr"]
     for i in range (0,8):
@@ -496,39 +498,49 @@ def Procselfpred(request):
     model=get_Model("model_self")
     Data=TransformData(npop) 
     predictions=get_Predictions(model,Data)
+    print(predictions,"(((((((((((((")
     fname=getFileNamefromtype("_self",predictions)
     Title,color,desc,Char1,Char2,Char3,Char4,image_nam=ReadlinesFromInfoFile(fname,"self_dir")
+    Add_Pred_at_DB_details(request,request.session["per_name"],opinion,predictions,predictions,fname)
+    return render(request,'user/fin_rep_grid.html',{'title':Title,'color':color,'Desc':desc,'char1':Char1,'char2':Char2,'char3':Char3,'char4':Char4,'IMG_NAME':'gif_images/nice.gif','PAGE_TITLE':page_title})    
 def Procfriendpred(request):
-
+    page_title="Your Relationship with "+  request.session["per_name"] +" is:"
     opinion=[]
     values_arr=request.session["user_values_arr"]
+    print(values_arr,".................")
     for i in range (0,15):
         print(opinion)
         print()
         opinion.append(int(values_arr[i]))
     npop= np.array(opinion)
-    model=get_Model("model_friend")
+    model=get_Model("model_Friends")
     Data=TransformData(npop) 
     predictions=get_Predictions(model,Data)
-    fname=getFileNamefromtype("_friend",predictions) 
+    fname=getFileNamefromtype("_frd",predictions) 
     
-    Title,Char1,Char2,Char3,Char4,color,image_name=ReadlinesFromInfoFile(fname,"friend_dir")
+    Title,color,desc,Char1,Char2,Char3,Char4,image_name=ReadlinesFromInfoFile(fname,"frd_dir")
+    Add_Pred_at_DB_details(request,request.session["per_name"],opinion,predictions,predictions,fname)
+    return render(request,'user/fin_rep_grid.html',{'title':Title,'color':color,'Desc':desc,'char1':Char1,'char2':Char2,'char3':Char3,'char4':Char4,'IMG_NAME':'gif_images/nice.gif','PAGE_TITLE':page_title})    
 def Procrelatpred(request):
-
+    page_title="Your Relationship with "+  request.session["per_name"] +"is:"
     opinion=[]
     values_arr=request.session["user_values_arr"]
+    print(values_arr,".................")
     for i in range (0,11):
         print(opinion)
         print()
         opinion.append(int(values_arr[i]))
     npop= np.array(opinion)
-    model=get_Model("model_relation")
+    model=get_Model("model_Relation")
     Data=TransformData(npop) 
     predictions=get_Predictions(model,Data)
-    fname=getFileNamefromtype("_relation",request.session["per_name"],) 
-    Title,color,desc,Char1,Char2,Char3,Char4,image_nam=ReadlinesFromInfoFile(fname,"relat_dir")
+    print(predictions)
+    fname=getFileNamefromtype("_rt",predictions) 
+    Title,color,desc,Char1,Char2,Char3,Char4,image_nam=ReadlinesFromInfoFile(fname,"rt_dir")
+    Add_Pred_at_DB_details(request,request.session["per_name"],opinion,predictions,predictions,fname)
+    return render(request,'user/fin_rep_grid.html',{'title':Title,'color':color,'Desc':desc,'char1':Char1,'char2':Char2,'char3':Char3,'char4':Char4,'IMG_NAME':'gif_images/nice.gif','PAGE_TITLE':page_title})    
 def Proccrushpred(request):
-
+    page_title="Your Relationship with "+  request.session["per_name"] +" is:"
     opinion=[]
     values_arr=request.session["user_values_arr"]
     for i in range (0,5):
@@ -540,9 +552,11 @@ def Proccrushpred(request):
     Data=TransformData(npop) 
     predictions=get_Predictions(model,Data)
     fname=getFileNamefromtype("_crush",predictions)
-    Title,color,desc,Char1,Char2,Char3,Char4,image_nam=ReadlinesFromInfoFile(fname,"crush_dir")    
+    Title,color,desc,Char1,Char2,Char3,Char4,image_nam=ReadlinesFromInfoFile(fname,"crush_dir")
+    Add_Pred_at_DB_details(request,request.session["per_name"],opinion,predictions,predictions,fname)
+    return render(request,'user/fin_rep_grid.html',{'title':Title,'color':color,'Desc':desc,'char1':Char1,'char2':Char2,'char3':Char3,'char4':Char4,'IMG_NAME':'gif_images/nice.gif','PAGE_TITLE':page_title})    
 def Procfamilypred(request):
-
+    page_title="Your Relationship with "+  request.session["per_name"] +" is:"
     opinion=[]
     values_arr=request.session["user_values_arr"]
     for i in range (0,4):
@@ -561,7 +575,7 @@ def Procfamilypred(request):
     print(Title,color,desc,Char1,Char2,Char3,Char4,image_name) 
     print(Char1)
     Add_Pred_at_DB_details(request,request.session["per_name"],opinion,predictions,predictions,fname)
-    return render(request,'user/fin_rep_grid.html',{'title':Title,'color':color,'Desc':desc,'char1':Char1,'char2':Char2,'char3':Char3,'char4':Char4,'IMG_NAME':'gif_images/nice.gif'})
+    return render(request,'user/fin_rep_grid.html',{'title':Title,'color':color,'Desc':desc,'char1':Char1,'char2':Char2,'char3':Char3,'char4':Char4,'IMG_NAME':'gif_images/nice.gif','PAGE_TITLE':page_title})
 
 def Add_Pred_at_DB_details(request,fname,values_arr,Data,predictions,predname):
     request.session["PRED_ID"]=None

@@ -10,7 +10,7 @@ import os
 
 
 def home(request):
-    return render(request,'login/homepage.html')
+    return render(request,'login/login.html')
 
 
 def my_login(request):
@@ -68,4 +68,6 @@ def signup(request):
             
             return redirect('/')
 
-                 
+def signupr(request):
+    return render(request,'login/Signup.html')
+    

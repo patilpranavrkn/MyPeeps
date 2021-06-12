@@ -1,4 +1,6 @@
+{% extends 'base.html' %}
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -10,17 +12,18 @@
 
     <title>Hello, world!</title>
 	
-	<style>
+	{% block css %}
 		.shadow-textarea textarea.form-control::placeholder {
     font-weight: 300;
 	}
 	.shadow-textarea textarea.form-control {
     padding-left: 0.8rem;
 	}
-	</style>
+	  {% endblock css %}
   </head>
-  <body>
-	  <h1 class="display-3" style= "text-align: center;">Share with us your valuable feedback</h1>
+   {% block body %}
+	  <h2 class="display-4" style= "text-align: center;"><strong><u>Share with us your valuable feedback</u></strong></h2>
+
 	  
 	  <div class="container">
 		<form  method="POST" action="save_feedback">
@@ -72,7 +75,7 @@
 		</form>
 	
 	  </div>
-
+	 {% endblock body %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

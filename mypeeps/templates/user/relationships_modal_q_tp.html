@@ -173,8 +173,7 @@ select {
  </div>
  </div>
  </div>
-  </div>
- </div>
+
   <div class="modal fade" id="myModal4" role="dialog">
     <div class="modal-dialog">
  
@@ -201,8 +200,7 @@ select {
  </div>
  </div>
  </div>
-  </div>
- </div>
+
    <div class="modal fade" id="myModal5" role="dialog">
     <div class="modal-dialog">
  <div class="modal-content">
@@ -259,7 +257,7 @@ select {
 
         <div class="modal-body">
 		<h5>Do you  tend to get jealous or possessive about partner?</h5><br>
-	<select class="form-control" id="opt7" name="opt">
+	<select class="form-control" id="opt7" name="opt7">
 	
 	<optgroup>
 	        <option value="1">Strongly Agree</option>
@@ -279,13 +277,40 @@ select {
  </div>
   </div>
  </div>
-   <div class="modal fade" id="myModal8" role="dialog">
+ 
+    <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog">
+ <div class="modal-content">
+
+        <div class="modal-body">
+		<h5>What can you tell about trust and Support?</h5><br>
+	<select class="form-control" id="opt8" name="opt8">
+	
+	<optgroup>
+	      <option value="1">Strongly Agree</option>
+        <option value="2">Agree</option>
+        <option value="3">The Apathetic</option>
+        <option value="4">Not Agree</option>
+        <option value="5">Strongly Not Agree</option>
+		</optgroup>
+    </select>
+        </div>
+        <div class="modal-footer">
+		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
+	<span style="padding-left:10px">
+          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+		  
+        </div>
+ </div>
+ </div>
+ </div>
+   <div class="modal fade" id="myModal9" role="dialog">
     <div class="modal-dialog">
  <div class="modal-content">
 
         <div class="modal-body">
 		<h5>Intimacy</h5><br>
-	<select class="form-control" id="opt8" name="opt8">
+	<select class="form-control" id="opt9" name="opt9">
 	
 	<optgroup>
 	      <option value="1">Strongly Agree</option>
@@ -305,13 +330,13 @@ select {
  </div>
  </div>
  </div>
-  <div class="modal fade" id="myModal9" role="dialog">
+  <div class="modal fade" id="myModal10" role="dialog">
     <div class="modal-dialog">
  <div class="modal-content">
 
         <div class="modal-body">
 		<h5>Are you pursuing your shared goals?</h5><br>
-	<select class="form-control" id="opt9" name="opt9">
+	<select class="form-control" id="opt10" name="opt10">
 	
 	<optgroup>
 	        <option value="1">Strongly Agree</option>
@@ -331,13 +356,13 @@ select {
  </div>
   </div>
  </div>
-  <div class="modal fade" id="myModal10" role="dialog">
+  <div class="modal fade" id="myModal11" role="dialog">
     <div class="modal-dialog">
 <div class="modal-content">
 
         <div class="modal-body">
 		<h5>Do you  seeks partner’s affection and Validation.</h5><br>
-	<select class="form-control" id="opt10" name="opt10">
+	<select class="form-control" id="opt11" name="opt11">
 	
 	<optgroup>
 	       <option value="1">Strongly Not Agree</option>
@@ -351,53 +376,14 @@ select {
         <div class="modal-footer">
 		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
 	<span style="padding-left:10px">
-          <button type="button" class="btn btn-success"  onclick=Next()>Next <i class="fas fa-arrow-circle-right"></i></button><br>
+         <button type="button" class="btn btn-primary"  onclick=Analyze()>Analyze <i class="fab fa-searchengin"></i></button><br>
 		  
         </div>
  </div>
   </div>
  </div>
-   <div class="modal fade" id="myModal11" role="dialog">
-    <div class="modal-dialog">
- <div class="modal-content">
 
-        <div class="modal-body">
-		<h5></h5><br>
-	<select class="form-control" id="opt11" name="opt11">
-	
-	<optgroup>
 
-		</optgroup>
-    </select>
-        </div>
-        <div class="modal-footer">
-		 <button type="button" class="btn btn-warning float-left" onclick=Prev()>Previous <i class="fas fa-arrow-circle-left"></i></button>
-	<span style="padding-left:10px">
-      <button type="button" class="btn btn-primary"  onclick=Analyze()>Analyze <i class="fab fa-searchengin"></i></button><br>
-		  
-        </div>
- </div>
- </div>
- </div>
-      <div class="modal" tabindex="-1" role="dialog" id="newm">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
   <div class="modal" tabindex="-1" role="dialog" id="newm">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -449,8 +435,10 @@ select {
 
 function Analyze()
 {
-
-		$("#myModal"+modelnum).modal('hide');
+valueArr[modelnum-1]=selectvar.value;
+	seletIndex[modelnum-1]=selectvar.selectedIndex;
+	alert(valueArr);
+	
 		$("#newm").modal('show');
 	
 		
@@ -491,6 +479,7 @@ function Analyze()
 		modelnum++;
 		$("#myModal"+modelnum).modal('show');
 		console.log(valueArr,innerTextArr)
+		///alert(valueArr,modelnum)
 		
 		
 		

@@ -53,33 +53,34 @@
 	<section class="Form my-4 mx-5">
 		<div class="container">
 			<div class="row no-gutters">
-				<div class="col-lg-4">
-					<img src={% static 'relation_m/findme_login.jpg' %} class="img-fluid" alt="">
+				<div class="col-lg-5">
+					<img src={% static 'relation_m/findme_login.png' %} class="img-fluid" alt="">
 				</div>
 				<div class="col-lg-7 px-5 pt-5">
 				<h1 class="font-weight-bold py-3 ml-4">PerceptI</h1>
 				<h7 class="ml-4">Understand Yourself and Relations</h7>
-				<form action="" method="POST">
+				<form action="login" method="POST">
+				   {% csrf_token %}
 
 					<div class="form-row">
 						<div class="col-lg-7">
-							<input type="email" placeholder="Username" class="form-control my-3 p-4 ml-4" name="username">
+							<input type="text" placeholder="Username" class="form-control my-3 p-4 ml-4" name="username" minlength="4">
 						</div>
 					</div>
 					
 					<div class="form-row">
 						<div class="col-lg-7">
-							<input type="password" placeholder="Password" class="form-control my-3 p-4 ml-4" name="password">
+							<input type="password" placeholder="Password" class="form-control my-3 p-4 ml-4" name="password"minlength="4" >
 						</div>
 					</div>
 
 					<div class="form-row">
 						<div class="col-lg-7">
-							<button type="button" class="btn1 mt-3 mb-5 ml-4">LOGIN</button>
+							<button type="submit" class="btn1 mt-3 mb-5 ml-4">LOGIN</button>
 						</div>
 					</div>
 					
-					<p>Already have a account? <a href="#">Login</a></p>
+					<p>Don't have a  account? <a href="signupl">Signup</a></p>
 				</form>
 			</div>
 		
