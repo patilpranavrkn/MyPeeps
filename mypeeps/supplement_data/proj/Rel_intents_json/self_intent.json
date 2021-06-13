@@ -1,0 +1,77 @@
+{"intents": [
+    {"tag": "GREETINGS",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day",],
+     "responses": ["Hello, thanks for visiting", "Good to see you !", "Hi there, how can I help?","How Can I help with your self"],
+     "context_set": ""
+    },
+    {
+    "tag": "HIMPM",
+     "patterns": ["How to improve myself","I want to change my life","I want to be winner"],
+     "responses": ["Do yoga","Read Self-help content","Read biographies"],
+     "context_set": ""
+    },  
+    {
+        "tag": "FEELSAD",
+         "patterns": ["I'm feeling sad","I'm feeling bad","I hate myself","It seems that'm in depressing","I feel bad all the time"],
+         "responses": ["It's okay to feel sad sometimes but if this is happening constantly you should seek proffessional help.","You should seek proffessional help and tell this to your closed ones","Tell someone who is very closed to you","Tell your family seek some help" ],
+         "context_set": ""
+    },
+    {
+        "tag": "UNWORTHY",
+         "patterns": ["Am feeling unworthy","Feeling worthless"],
+         "responses": ["Yes you can feel like this at times!But you shouldn't get stuck in it!","This usually happens when you aren't able to achieve something","Set small goals and and try to achieve them","Analyze why you aren't able to achieve this goals"],
+         "context_set": ""
+    },       
+    {
+        "tag": "GOALS",
+         "patterns": ["Why Am unable to achieve my goals","I'm always failing at achieving things?"],
+         "responses": ["This happens when you're less focused","Question yourself that whether you are setting the right goals?","Are your goals too big and you spend most of the time day-dreaming about it","Enhance yourself"],
+	
+         "context_set": ""
+    },    
+    {
+        "tag": "RELMYS",
+         "patterns": ["How to improve relationship with myself","I have bad relationship with myself","How there can be a good relationship with others"],
+         "responses": ["Start to analyze what gives you happiness and peace?","Find a hobby master it, the better you get at sometime the more good you will feel?","Get over your past and stop the self sabbotage","Become self aware of your present situation and be more spiritual"],
+         "context_set": ""
+    },
+    {
+        "tag":"IMSTRESSEDD",
+        "patterms":["Im anxious some times","I feel stressed out","This stress is getting me","I'm worried"],
+        "responses":["Move your body , go do some exercise","The more time you spend invested in your thoughts the more you will stressed out","Yoga can be a good option to curb stress,It's definitely worth checking","Try meditation it's also an amazing way to relax yourself,There are various apps and free learning available to learn meditaion ,go check them out"],
+        "context_set": "",
+    },
+    {
+        "tag":"IMPRVMYSLF",
+        "patterms":["How to be a better person?","How to improve myself?"],
+        "responses":["How do you know that you're a bad person? Try to be better in your own eyes","One becomes a better person by improving one's understanding towards their own life.Find ways on how you can do it explore","Read read and read! There are great books out there to get inspired from.Start reading biographies of entreprenurs,leaders and people who have made difference in the world","Be really aware of what are you feeding your mind.We are average of people we surround ourselves with. This feeding to the mind can be anything from news to casual conversations or what you see in social media",],
+        "context_set": "",
+    },
+    {
+        "tag":"DEPENDENT",
+        "patterms":["I'm too dependent on others?","Why I'm too dependent on other people?","I'm dependent on others","I Feel the need of emotionally dependency on others",],
+        "responses":["One must be self empowered in all aspects of life ,being emotionally independent is very necessary,This can be achieved by becoming self -aware,understanding your loneliness and your needs.Meditaton can be an significant step  in this direction"],
+        "context_set": "",
+    },
+    {
+        "tag":"INTOXH",
+        "patterms":["I'm addicted","I want to get rid of the intoxicants","I want to quit smoking how can I?","Drinking problem how to quit it"],
+        "responses":["If you are really going through this problem,It should be addressed as soon as possible.The more you delay it,the worse it will become.Seek help immediately.Seek a helping group and stay away from friends/people who encourage this activity.Uou should Consider helping yourself on high priority coz thse addictions will eventually ruin your life."],
+        "context_set": "",
+    },
+
+    {
+        "tag":"DELNEG",
+        "patterms":["I'm getting negative thoughts","Feel happy","How to deal with this negativity?"],
+        "responses":["You can consider staying away from the content which you feel is negative.","The more you give attention to the negative thought ,the more it will grow!","You might need to analyze that is the thought really negative? Or you might be averse from it for some reason.You really need to look into those negative thoughts and feelings honestly."],
+        "context_set": "",
+    },
+    {
+        "tag":"",
+        "patterms":[],
+        "responses":[],
+        "context_set": "",
+    },
+    
+    ]
+}

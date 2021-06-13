@@ -1,0 +1,269 @@
+{"intents": [
+    {"tag": "Greetings",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+     "responses": ["Hello, thanks for visiting", "Good to see you !", "Hi there, how can I help?","How Can I help with your self"],
+     "context_set": ""
+    },
+    {
+    "tag": "IMPRESS",
+     "patterns": ["How to impress my crush?","If the person is put of my league how to get them? ","How to make her mine?","How to make him mine?"],
+     "responses": ["Focus on your life","Try improving your life","Work on yourself","Improve yourself in each and every aspect","Try to reach your potential"],
+     "context_set": ""
+    },  
+    {
+        "tag": "APPROACHSING",
+         "patterns": ["Should I make a move if she is single?","Should I make a move if he is single?","how to make a move?","Make me notice in front of him","Make me notice in front of her"],
+         "responses": ["You should be careful","Go slow and steady with your moves they could land you in trouble"],
+         "context_set": ""
+    },
+    {
+        "tag": "APPROACHRELAT",
+         "patterns": ["Should I make a move if she is relationship?","Should I make a move if he is relationship?","She is in Relationship","She has a boyfriend","He has a girlfriend","He is committed","She is committed"],
+         "responses": ["No you shouldn't do it","It will seem a very desperate act","No you should find someone other"],
+         "context_set": ""
+    },       
+    {
+        "tag": "AVOIDS",
+         "patterns": ["What to do if they avoid me?","What to do if he avoids me?","What to do if she avoids me?"],
+         "responses": ["Don't chase them","You might seem desperate","If you're being avoided avoid them back."],
+         "context_set": ""
+    },    
+    {
+        "tag": "SIGNS",
+         "patterns": ["What are some hints to look out for?","He is giving hints?","She is giving hints?"],
+         "responses": ["Getting attention from them","They will speak with you"],
+         "context_set": ""
+    },
+	{
+    "tag": "HIMPM",
+     "patterns": ["How to improve myself","I want to change my life","I want to be winner"],
+     "responses": ["Do yoga","Read Self-help content","Read biographies"],
+     "context_set": ""
+    },  
+    {
+        "tag": "FEELSAD",
+         "patterns": ["I'm feeling sad","I'm feeling bad","I hate myself","It seems that'm in depressing","I feel bad all the time"],
+         "responses": ["It's okay to feel sad sometimes but if this is happening constantly you should seek proffessional help.","You should seek proffessional help and tell this to your closed ones","Tell someone who is very closed to you","Tell your family seek some help" ],
+         "context_set": ""
+    },
+    {
+        "tag": "UNWORTHY",
+         "patterns": ["Am feeling unworthy","Feeling worthless"],
+         "responses": ["Yes you can feel like this at times!But you shouldn't get stuck in it!","This usually happens when you aren't able to achieve something","Set small goals and and try to achieve them","Analyze why you aren't able to achieve this goals"],
+         "context_set": ""
+    },       
+    {
+        "tag": "GOALS",
+         "patterns": ["Why Am unable to achieve my goals","I'm always failing at achieving things?"],
+         "responses": ["This happens when you're less focused","Question yourself that whether you are setting the right goals?","Are your goals too big and you spend most of the time day-dreaming about it","Enhance yourself"],
+	
+         "context_set": ""
+    },    
+    {
+        "tag": "RELMYS",
+         "patterns": ["How to improve relationship with myself","I have bad relationship with myself","How there can be a good relationship with others"],
+         "responses": ["Start to analyze what gives you happiness and peace?","Find a hobby master it, the better you get at sometime the more good you will feel?","Get over your past and stop the self sabbotage","Become self aware of your present situation and be more spiritual"],
+         "context_set": ""
+    },
+    {
+        "tag":"IMSTRESSEDD",
+        "patterms":["Im anxious some times","I feel stressed out","This stress is getting me","I'm worried"],
+        "responses":["Move your body , go do some exercise","The more time you spend invested in your thoughts the more you will stressed out","Yoga can be a good option to curb stress,It's definitely worth checking","Try meditation it's also an amazing way to relax yourself,There are various apps and free learning available to learn meditaion ,go check them out"],
+        "context_set": ""
+    },
+    {
+        "tag":"IMPRVMYSLF",
+        "patterms":["How to be a better person?","How to improve myself?"],
+        "responses":["How do you know that you're a bad person? Try to be better in your own eyes","One becomes a better person by improving one's understanding towards their own life.Find ways on how you can do it explore","Read read and read! There are great books out there to get inspired from.Start reading biographies of entreprenurs,leaders and people who have made difference in the world","Be really aware of what are you feeding your mind.We are average of people we surround ourselves with. This feeding to the mind can be anything from news to casual conversations or what you see in social media"],
+        "context_set": ""
+    },
+    {
+        "tag":"DEPENDENT",
+        "patterms":["I'm too dependent on others?","Why I'm too dependent on other people?","I'm dependent on others","I Feel the need of emotionally dependency on others"],
+        "responses":["One must be self empowered in all aspects of life ,being emotionally independent is very necessary,This can be achieved by becoming self -aware,understanding your loneliness and your needs.Meditaton can be an significant step  in this direction"],
+        "context_set": ""
+    },
+    {
+        "tag":"INTOXH",
+        "patterms":["I'm addicted","I want to get rid of the intoxicants","I want to quit smoking how can I?","Drinking problem how to quit it"],
+        "responses":["If you are really going through this problem,It should be addressed as soon as possible.The more you delay it,the worse it will become.Seek help immediately.Seek a helping group and stay away from friends/people who encourage this activity.Uou should Consider helping yourself on high priority coz thse addictions will eventually ruin your life."],
+        "context_set": ""
+    },
+
+    {
+        "tag":"DELNEG",
+        "patterms":["I'm getting negative thoughts","Feel happy","How to deal with this negativity?"],
+        "responses":["You can consider staying away from the content which you feel is negative.","The more you give attention to the negative thought ,the more it will grow!","You might need to analyze that is the thought really negative? Or you might be averse from it for some reason.You really need to look into those negative thoughts and feelings honestly."],
+        "context_set": ""
+    },
+	
+    {
+    "tag": "COMMPART",
+     "patterns": ["How I can communicate freely with my partner?","There is communication gap?How to fill it."],
+     "responses": ["Try to understand your partner on a deep level","Keep your Ego aside while communicating"],
+     "context_set": ""
+    },  
+    {
+        "tag": "ATTENTION",
+         "patterns": ["The person is not giving me enough time?","The person seems to avoid me"],
+         "responses": ["Have you considered why you're being avoided?","Increase your value"],
+         "context_set": ""
+    },
+    {
+        "tag": "JEALOUSY",
+         "patterns": ["Partner seems to be jealous of me","The person seems to avoid me."],
+         "responses": ["Discuss this frankly with your partner"],
+         "context_set": ""
+    },       
+    {
+        "tag": "FIGHTS",
+         "patterns": ["I've been constantly fightimg with my partner","How can I release stress in my relationship?"],
+         "responses": ["discuss and Stop the misunderstanding"],
+         "context_set": ""
+    },    
+    {
+        "tag": "STAY",
+         "patterns": ["Is the relationship right for me?","How to decide whether a person is correct for me?","Should i stay in this relationship?"],
+         "responses": ["How you feel in the presence of the partner tells it all"],
+         "context_set": ""
+    },
+    {
+        "tag": "BETTERR",
+         "patterns": ["Better my relationship?","Be happy more together?","Lead a good life"],
+         "responses": ["Elevate yourself in every aspect and also see your partner elevate themselves"],
+         "context_set": ""
+    },
+      
+
+    {
+    "tag": "HOWGF",
+     "patterns": ["How to be a good friend?","How to be a great friend?","How to be beter friend?"],
+     "responses": ["Encourage and motivate your friends,criticize them constructively","Don't gosspip about them on their back,help them to make them better","If they're making mistakes confront them and tell them","Don't load off your complaints on them"],
+     "context_set": ""
+    },  
+    {
+        "tag": "WHOGF",
+         "patterns": ["Who is a good friend?","How to identify a good friend?","is that person a good friend?"],
+         "responses": ["Who Encourages and motivate you In your goals","Doesn't gosspip and pity party","Helps you in your need","Don't load off your complaints on them"],
+         "context_set": ""
+    },
+    {
+        "tag": "HELPF",
+         "patterns": ["How can I actually help my friend?","Be good for a friend.","Improve my friend's life"],
+         "responses": ["Encourage and motivate your friends,criticize them constructively","Don't gosspip about them on their back,help them to make them better","If they're making mistakes confront them and tell them","Don't load off your complaints on them"],
+         "context_set": ""
+    },       
+    {
+        "tag": "AVOIDF",
+         "patterns": ["Which friends should I avoid","What kind of friends should I stay away from?","Bad friends","Which kind of friends to run away from?"],
+         "responses": ["Those who don't have a life of their own","The one who are addiccted to intoxicants and always have complaints to make"],
+         "context_set": ""
+    },    
+    {
+        "tag": "MAKEFRNDS",
+         "patterns": ["I want to make more friends?","How can I get more friends?","Isn't good to have so many friends?"],
+         "responses": ["Don't try to make friends , focus on your life and let the best happen","It's better to have small group of close friends than having more friends","Do more what you are passionate about and express it to the world and the world may follow"],
+         "context_set": ""
+    },
+    {
+        "tag": "DIFFRND",
+         "patterns": ["Not feel nowadays to spend time with friends?","I'm loosing my group of friends.","Not feel spending much time with friends?"],
+         "responses": ["It may be a good thing you could be growing in every aspect of life"],
+         "context_set": ""
+    },
+    {
+        "tag": "AVOIDTOX",
+         "patterns": ["I have toxic frends.","My friends kill my time.","How to get rid of toxic friends"],
+         "responses": ["Stay away from such people,try to help them at first but still if they aren't willing to change","Tell them about your priorities,make them realize that you have alife too"],
+         "context_set": ""
+    } ,
+	{
+    "tag": "GOODFP",
+     "patterns": ["How to be a good Family Memeber?","How to help my family?"],
+     "responses": ["To be a good family member try to understand them. Be more open towards them", "Try to understand them as if they were you're friends"],
+     "context_set": ""
+    },  
+    {
+        "tag": "IMPRVCOMM",
+         "patterns": ["How I can Improve communication with my family?","How to communicate freely?","How to Increase bond with my family"],
+         "responses": ["Try to be in theie shoes , listen to them well. Don't impose your behaviour onto them","Expres your support and stop crticizing them"],
+         "context_set": ""
+    },
+    {
+        "tag": "REMBITT",
+         "patterns": ["How to remove bitternes towards that member?"],
+         "responses": ["If there really is any bitterness seek to understand it. And confrontt it. Forgive them!"],
+         "context_set": ""
+    },       
+    {
+        "tag": "FAMMEMBERS",
+         "patterns": ["My family members are not open minded?","How to make my parents more friendlier towards me?"],
+         "responses": ["It may happen because your parents might have been raised in the same manner","Slowly slowly you should open up to your parents and make them understand,also try to understand your parents well.It may happenthat you becoming friendlier to them could get make them be friendlier to you"],
+         "context_set": ""
+    },
+    {
+        "tag": "GOODP",
+         "patterns": ["How can i be a better parent?","How to be good with my children"],
+         "responses": ["Try to be in theie shoes , listen to them well. Don't impose your behaviour onto them","Expres your support and stop crticizing them"],
+         "context_set": ""
+    },
+    {
+    "tag": "IMPRESS",
+     "patterns": ["How to impress my crush?","If the person is put of my league how to get them? ","How to make her mine?","How to make him mine?"],
+     "responses": ["Focus on your life","Try improving your life","Work on yourself","Improve yourself in each and every aspect","Try to reach your potential"],
+     "context_set": ""
+    },  
+    {
+        "tag": "APPROACHSING",
+         "patterns": ["Should I make a move if she is single?","Should I make a move if he is single?","how to make a move?","Make me notice in front of him","Make me notice in front of her"],
+         "responses": ["You should be careful","Go slow and steady"],
+         "context_set": ""
+    },
+    {
+        "tag": "APPROACHRELAT",
+         "patterns": ["Should I make a move if she is relationship?","Should I make a move if he is relationship?","She is in Relationship","She has a boyfriend","He has a girlfriend","He is committed","She is committed"],
+         "responses": ["No you shouldn't do it","It will seem a very desperate act","No you should find someone other"],
+         "context_set": ""
+    },       
+    {
+        "tag": "AVOIDS",
+         "patterns": ["What to do if they avoid me?","What to do if he avoids me?","What to do if she avoids me?"],
+         "responses": ["Don't chase them","You might seem desperate","If you're being avoided avoid them back.","Geniunely understand why someone is avoiding you and act accordingly"],
+         "context_set": ""
+    },    
+    {
+        "tag": "SIGNS",
+         "patterns": ["What are some hints to look out for?","He is giving hints?","She is giving hints?"],
+         "responses": ["Getting attention from them","They will speak with you"],
+         "context_set": ""
+    }, {
+        "tag": "ABUSIVER",
+         "patterns": ["I'm in a abusive relationship","How to get out of abusive relationship","Abuse me"],
+         "responses": ["Such relationships are dangerous to be in","You should not settle if someone is abusing you.","Protect yourself and get away from such people"],
+         "context_set": ""
+
+    },
+    {
+        "tag": "ENERGYVAMP",
+         "patterns": ["They suck my energy out ","My friend is an Energy vampire"],
+         "responses": ["If you fel drained around some people.It's better to avoid them and run away","Such people are energy vampires ","Protect yourself and get away from such people","The more you give attention more such people will won't get rid of you"],
+         "context_set": ""
+    },
+  {
+    "tag":"AFRAID",
+    "pattern":["Im afraid of things","I'm afrad of people"],
+    "responses":["Acknowledge your fears and start working on them","You'll only overcome them by understanding them and getting ahead of them"],
+    "context_set": ""
+
+  },
+  {
+    "tag":"PORNPROB",
+    "pattern":["How to get rid of porn","I'm addicted to porn"],
+    "responses":["Porn will destroy your life.Get Leave it now or it wil destriy your life","Seek help and commit to quitting porn once and for all!"],
+    "context_set": ""
+
+  }
+
+    
+]   
+}

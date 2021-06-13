@@ -1,0 +1,81 @@
+{"intents": [
+    {"tag": "GREETINGS",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day",],
+     "responses": ["Hello, thanks for visiting", "Good to see you !", "Hi there, how can I help?","How Can I help with your self"],
+     "context_set": ""
+    },
+    {
+    "tag": "HIMPM",
+     "patterns": ["How to improve myself","I want to change my life","I want to be winner"],
+     "responses": ["Do yoga","Read Self-help content","Read biographies"],
+     "context_set": ""
+    },  
+    {
+        "tag": "FEELSAD",
+         "patterns": ["I'm feeling sad","I'm feeling bad","I hate myself","It seems that'm in depressing","I feel bad all the time"],
+         "responses": [],
+         "context_set": ""
+    },
+    {
+        "tag": "UNWORTHY",
+         "patterns": ["Am feeling unworthy"],
+         "responses": [],
+         "context_set": ""
+    },       
+    {
+        "tag": "GOALS",
+         "patterns": ["Why Am unable to achieve my goals","I'm always failing at achieving things?"],
+         "responses": [],
+         "context_set": ""
+    },    
+    {
+        "tag": "RELMYS",
+         "patterns": ["How to improve relationship with myself","I have bad relationship with myself","How there can be a good relationship with others"],
+         "responses": [],
+         "context_set": ""
+    },
+    {
+        "tag":"IMSTRESSEDD",
+        "patterms":["Im anxious some times","I feel stressed out","This stress is getting me","I'm worried"],
+        "responses":[],
+        "context_set": "",
+    },
+    {
+        "tag":"IMPRVMYSLF",
+        "patterms":["How to be a better person?","How to improve myself?"],
+        "responses":[],
+        "context_set": "",
+    },
+    {
+        "tag":"DEPENDENT",
+        "patterms":["I'm too dependent on others?","Why I'm too dependent on other people?","I'm dependent on others"],
+        "responses":[],
+        "context_set": "",
+    },
+    {
+        "tag":"INTOXH",
+        "patterms":["I'm addicted","I want to get rid of the intoxicants","I want to quit smoking how can I?","Drinking problem how to quit it"],
+        "responses":[],
+        "context_set": "",
+    },
+    {
+        "tag":"GROWSTR",
+        "patterms":["How to grow emotionally strong?","I want to grow strong mentally"],
+        "responses":[],
+        "context_set": "",
+    },
+    {
+        "tag":"FEELMOT",
+        "patterms":["How to be more motivated","Feel happy","I want to achieve goals"],
+        "responses":[],
+        "context_set": "",
+    },
+    {
+        "tag":"",
+        "patterms":[],
+        "responses":[],
+        "context_set": "",
+    },
+    
+    ]
+}

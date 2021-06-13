@@ -1,0 +1,11 @@
+{"intents": [
+        {"tag": "ToF",
+         "patterns": ["What is a True Friend", "What True Friend", "Meaning of True Friend", "Will he be a Good Friend?","Can I trust him","Will he hurt me",],
+         "responses": ["He is the best friend that you can ask for.", "This guy will always help you ", "Always there for you"],
+         "context_set": ""
+        }
+	
+		
+       
+   ]
+}

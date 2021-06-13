@@ -1,0 +1,23 @@
+Hi Team,
+
+ 
+
+Please take latest integrated code from branch PP_Daisy2.1_NewRequirments. All the recent enhancements/code are integrated in this branch.
+
+Create your local branch and start using your local branch for all further tasks. Please test all the new and existing functionalities on your local branch.
+
+ 
+
+Kindly refer below Git commands to create your local branch. Follow the same sequence as mentioned below.
+
+git fetch
+git  checkout PP_Daisy2.1_NewRequirments
+git branch
+git  checkout -b give name to your local branch . Example: git  checkout -b AS_Daisy2.1_Local_NewRequirements
+ 
+
+*Note: Please do not commit anything to the branch PP_Daisy2.1_NewRequirments. You should commit/push your code to your local branch only and then raise a MR to merge it to branch PP_Daisy2.1_NewRequirments.
+
+ 
+
+Any quires happy to assist.

@@ -1,0 +1,46 @@
+{"intents": [
+    {"tag": "Greetings",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day",],
+     "responses": ["Hello, thanks for visiting", "Good to see you !", "Hi there, how can I help?","How Can I help with your self"],
+     "context_set": ""
+    },
+    {
+    "tag": "IMPRESS",
+     "patterns": ["How to impress my crush?","If the person is put of my league how to get them? ","How to make her mine?","How to make him mine?"],
+     "responses": ["You can impress your crush by being the best of yourself","Improving yourself"],
+     "context_set": ""
+    },  
+    {
+        "tag": "APPROACHSING",
+         "patterns": ["Should I make a move if she is single?","Should I make a move if he is single?","how to make a move?","Make me notice in front of him","Make me notice in front of her"],
+         "responses": [],
+         "context_set": ""
+    },
+    {
+        "tag": "APPROACHRELAT",
+         "patterns": ["Should I make a move if she is relationship?","Should I make a move if he is relationship?","She is in Relationship","She has a boyfriend","He has a girlfriend","He is committed","She is committed"],
+         "responses": [],
+         "context_set": ""
+    },       
+    {
+        "tag": "AVOIDS",
+         "patterns": ["What to do if they avoid me?","What to do if he avoids me?","What to do if she avoids me?"],
+         "responses": [],
+         "context_set": ""
+    },    
+    {
+        "tag": "SIGNS",
+         "patterns": ["What are some hints to look out for?","He is giving hints?","She is giving hints?"],
+         "responses": [],
+         "context_set": ""
+    },
+    {
+        "tag": "",
+         "patterns": [],
+         "responses": [],
+         "context_set": ""
+    },
+    
+    
+    ]
+}

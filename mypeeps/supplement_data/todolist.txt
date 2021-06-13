@@ -1,0 +1,4 @@
+TODO LIST:
+Fix the tf models make them predict better.
+add the gif's well.
+make the chatbot traning go well.

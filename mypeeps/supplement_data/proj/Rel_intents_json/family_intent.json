@@ -1,0 +1,51 @@
+{"intents": [
+    {"tag": "Greetings",
+     "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day",],
+     "responses": ["Hello, thanks for visiting", "Good to see you !", "Hi there, how can I help?","How Can I help with your self"],
+     "context_set": ""
+    },
+    {
+    "tag": "GOODFP",
+     "patterns": ["How to be a good Family Memeber?","How to help my family?"],
+     "responses": ["To be a good family member try to understand them. Be more open towards them", "Try to understand them as if they were you're friends"],
+     "context_set": ""
+    },  
+    {
+        "tag": "IMPRVCOMM",
+         "patterns": ["How I can Improve communication with my family?","How to communicate freely?","How to Increase bond with my family"],
+         "responses": ["Try to be in theie shoes , listen to them well. Don't impose your behaviour onto them","Expres your support and stop crticizing them"],
+         "context_set": ""
+    },
+    {
+        "tag": "REMBITT",
+         "patterns": ["How to remove bitternes towards that member?"],
+         "responses": ["If there really is any bitterness seek to understand it. And confrontt it. Forgive them!"],
+         "context_set": ""
+    },       
+    {
+        "tag": "FAMMEMBERS",
+         "patterns": ["My family members are not open minded?","How to make my parents more friendlier towards me?"],
+         "responses": ["It may happen because your parents might have been raised in the same manner","Slowly slowly you should open up to your parents and make them understand,also try to understand your parents well.It may happenthat you becoming friendlier to them could get make them be friendlier to you"],
+         "context_set": ""
+    },
+    {
+        "tag": "GOODP",
+         "patterns": ["How can i be a better parent?","How to be good with my children"],
+         "responses": ["Try to be in theie shoes , listen to them well. Don't impose your behaviour onto them","Expres your support and stop crticizing them"],
+         "context_set": ""
+    },      
+    {
+        "tag": "",
+         "patterns": [],
+         "responses": [],
+         "context_set": ""
+    },
+	   {
+        "tag": "",
+         "patterns": ["],
+         "responses": [],
+         "context_set": ""
+    },
+    
+    ]
+}
